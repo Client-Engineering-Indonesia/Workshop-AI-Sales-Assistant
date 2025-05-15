@@ -1,0 +1,19 @@
+# General libraries
+numpy==1.24.4
+requests==2.32.3
+Pillow
+
+# FastAPI and ASGI server
+fastapi==0.115.5
+uvicorn==0.32.0
+python-multipart
+
+# IBM Watson and related SDKs
+ibm-watson-machine-learning
+ibm-watson
+ibm-db
+
+# Environment variable handling
+python-dotenv==1.0.1
+PyMuPDF==1.25.1
+docling==2.14.0
