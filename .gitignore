@@ -135,4 +135,4 @@ utils/milvus/*.crt
 utils/milvus/*.ipynb
 certs/*
 test/*
-data/*
+data_bkp/*
