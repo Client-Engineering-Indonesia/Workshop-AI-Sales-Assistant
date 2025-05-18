@@ -1,0 +1,199 @@
+transaction_timestamp,customer_id,customer_name,customer_birthday,customer_marriage_status,customer_savings_value,transaction_value,transaction_type,spending_location_or_category,estimated_annual_income,total_spending_last_month,most_common_spending_category,has_existing_loan,loan_product_interest_level,customer_segment
+2024-03-01 08:15:00,CUST001,Alice Wonderland,1990-05-20,Single,15230500000,-55200000,Debit,"Grocery Store ""FreshFoods""",75000000000,1200000000,Groceries,False,Medium,Young Professional
+2024-03-02 11:30:15,CUST001,Alice Wonderland,1990-05-20,Single,15230500000,-150000000,Debit,"Online Shop ""StyleHub""",75000000000,1200000000,Groceries,False,Medium,Young Professional
+2024-03-05 09:00:00,CUST002,Bob The Builder,1985-11-11,Married,58900750000,-800000000,Debit,Rent Payment,110000000000,3500000000,Bills,True,Low,Family
+2024-03-10 14:22:40,CUST002,Bob The Builder,1985-11-11,Married,58900750000,-45500000,Debit,"Gas Station ""FuelUp""",110000000000,3500000000,Bills,True,Low,Family
+2024-03-12 16:05:10,CUST003,Charlie Chaplin,1970-04-16,Divorced,3500100000,-25750000,Debit,"Coffee Shop ""QuickCup""",45000000000,800000000,Entertainment,False,High,Senior
+2024-03-15 10:00:00,CUST004,Diana Prince,1995-08-01,Married,150000000000,4500000000,Credit,"Salary Deposit ""InnovateCorp""",180000000000,2500000000,Shopping,False,nan,High Net Worth
+2024-03-18 09:30:00,CUST004,Diana Prince,1995-08-01,Married,150000000000,-300000000,Debit,Investment Fund Contribution,180000000000,2500000000,Shopping,False,nan,High Net Worth
+2024-03-20 11:50:00,CUST005,Ethan Hunt,2001-03-12,Single,750990000,-15000000,Debit,Streaming Service Sub,35000000000,600000000,Entertainment,False,High,Young Adult
+2024-03-25 08:00:00,CUST006,Fiona Shrek,1988-07-10,Married,22000400000,-180000000,Debit,Health Insurance Premium,90000000000,2000000000,Bills,False,Medium,Family
+2024-03-28 14:00:00,CUST006,Fiona Shrek,1988-07-10,Married,22000400000,-60000000,Debit,Kids Clothing Store,90000000000,2000000000,Bills,False,Medium,Family
+2024-04-01 08:10:00,CUST001,Alice Wonderland,1990-05-20,Single,15230500000,-70500000,Debit,"Grocery Store ""FreshFoods""",75000000000,1200000000,Groceries,False,Medium,Young Professional
+2024-04-03 13:45:00,CUST003,Charlie Chaplin,1970-04-16,Divorced,3500100000,-50000000,Debit,"Bookstore ""ReadWell""",45000000000,800000000,Entertainment,False,High,Senior
+2024-04-07 10:30:00,CUST004,Diana Prince,1995-08-01,Married,150000000000,-85500000,Debit,High-End Boutique,180000000000,2500000000,Shopping,False,nan,High Net Worth
+2024-04-10 09:00:00,CUST005,Ethan Hunt,2001-03-12,Single,750990000,250000000,Credit,Freelance Work Payment,35000000000,600000000,Entertainment,False,High,Young Adult
+2024-04-15 12:00:00,CUST002,Bob The Builder,1985-11-11,Married,58900750000,-120000000,Debit,Utilities Bill,110000000000,3500000000,Bills,True,Low,Family
+2024-04-20 10:00:00,CUST007,George Jetson,1965-02-28,Married,85000900000,-400000000,Debit,Auto Insurance Premium,130000000000,2200000000,Travel,False,Medium,Senior
+2024-04-22 11:30:00,CUST007,George Jetson,1965-02-28,Married,85000900000,-75000000,Debit,Airline Ticket,130000000000,2200000000,Travel,False,Medium,Senior
+2024-04-25 15:00:00,CUST008,Hannah Montana,1998-12-05,Single,10000000000,-50000000,Debit,Concert Ticket,60000000000,1000000000,Entertainment,False,High,Young Professional
+2024-04-26 09:00:00,CUST009,Indiana Jones,1955-07-01,Widowed,250000000000,-1500000000,Debit,Brokerage Account Deposit,200000000000,3000000000,Investments,False,nan,High Net Worth
+2024-04-28 10:00:00,CUST009,Indiana Jones,1955-07-01,Widowed,250000000000,-70000000,Debit,Museum Entry Fee,200000000000,3000000000,Investments,False,nan,High Net Worth
+2024-05-01 08:12:00,CUST010,Jasmine Princess,1992-09-18,Married,40000600000,3500000000,Credit,"Salary Deposit ""GlobalConnect""",95000000000,1800000000,Groceries,True,Medium,Family
+2024-05-01 09:00:00,CUST010,Jasmine Princess,1992-09-18,Married,40000600000,-90000000,Debit,Kids Education Fee,95000000000,1800000000,Groceries,True,Medium,Family
+2024-05-03 14:00:00,CUST011,Kevin McAllister,2000-08-26,Single,5000000000,-30000000,Debit,"Fast Food ""BurgerJoint""",30000000000,500000000,Shopping,False,High,Young Adult
+2024-05-05 11:00:00,CUST012,Leia Organa,1977-04-05,Married,120000000000,-250000000,Debit,Life Insurance Premium,150000000000,2800000000,Bills,False,Low,Senior
+2024-05-06 10:00:00,CUST012,Leia Organa,1977-04-05,Married,120000000000,-80000000,Debit,Pharmacy Purchase,150000000000,2800000000,Bills,False,Low,Senior
+2024-05-08 16:00:00,CUST013,Mulan Hua,1996-01-30,Single,18000500000,-75000000,Debit,Gym Membership,65000000000,1500000000,Entertainment,False,Medium,Young Professional
+2024-05-09 09:30:00,CUST014,Neo Anderson,1980-09-13,Single,70000000000,-500000000,Debit,Stock Purchase,120000000000,2000000000,Investments,False,Medium,Young Professional
+2024-05-09 10:00:00,CUST014,Neo Anderson,1980-09-13,Single,70000000000,-40000000,Debit,Tech Gadget Store,120000000000,2000000000,Investments,False,Medium,Young Professional
+2024-05-10 11:00:00,CUST015,Olive Oyl,1950-10-29,Widowed,9500700000,-35000000,Debit,"Grocery Store ""CornerMart""",30000000000,700000000,Groceries,False,Low,Senior
+2024-05-11 13:00:00,CUST016,Peter Pan,2003-12-01,Single,2000000000,-20000000,Debit,Game Store,25000000000,400000000,Entertainment,False,High,Young Adult
+2024-05-12 14:00:00,CUST017,Queen Amidala,1975-06-15,Married,200000000000,-800000000,Debit,Luxury Goods Store,250000000000,4000000000,Shopping,False,nan,High Net Worth
+2024-05-15 08:30:00,CUST018,Robin Hood,1983-03-17,Single,12000800000,-100000000,Debit,Charity Donation,50000000000,900000000,Other,False,Medium,Young Professional
+2024-05-18 10:00:00,CUST019,Sleeping Beauty,1993-08-08,Married,30000000000,-120000000,Debit,Baby Supplies Store,85000000000,1600000000,Groceries,False,Medium,Family
+2024-05-20 11:00:00,CUST020,Tarzan Jungle,1978-05-05,Single,50000000000,-600000000,Debit,Adventure Gear Shop,100000000000,2500000000,Travel,False,Medium,Young Professional
+2024-05-25 09:00:00,CUST021,Ursula Sea,1968-11-22,Divorced,18000200000,-90000000,Debit,Pet Store,40000000000,750000000,Other,False,High,Senior
+2024-05-28 14:30:00,CUST022,Aladdin Agrabah,1999-07-07,Single,3000000000,-40000000,Debit,Street Food Vendor,28000000000,550000000,Entertainment,False,High,Young Adult
+2024-05-30 10:00:00,CUST023,Belle Beauty,1991-04-17,Married,28000000000,-220000000,Debit,Book Subscription,70000000000,1300000000,Entertainment,False,Medium,Young Professional
+2024-06-01 08:20:00,CUST001,Alice Wonderland,1990-05-20,Single,15230500000,3000000000,Credit,Freelance Project Payment,75000000000,1200000000,Groceries,False,Medium,Young Professional
+2024-06-03 11:00:00,CUST002,Bob The Builder,1985-11-11,Married,58900750000,-150000000,Debit,Electricity Bill,110000000000,3500000000,Bills,True,Low,Family
+2024-06-05 09:15:00,CUST003,Charlie Chaplin,1970-04-16,Divorced,3500100000,-30000000,Debit,Bus Fare,45000000000,800000000,Entertainment,False,High,Senior
+2024-06-08 10:00:00,CUST004,Diana Prince,1995-08-01,Married,150000000000,-500000000,Debit,Charity Event Ticket,180000000000,2500000000,Shopping,False,nan,High Net Worth
+2024-06-10 14:00:00,CUST005,Ethan Hunt,2001-03-12,Single,750990000,-20000000,Debit,App Purchase,35000000000,600000000,Entertainment,False,High,Young Adult
+2024-06-12 16:30:00,CUST006,Fiona Shrek,1988-07-10,Married,22000400000,-55000000,Debit,"Grocery Store ""FamilyFoods""",90000000000,2000000000,Bills,False,Medium,Family
+2024-06-15 10:00:00,CUST007,George Jetson,1965-02-28,Married,85000900000,-120000000,Debit,"Restaurant ""FineDining""",130000000000,2200000000,Travel,False,Medium,Senior
+2024-06-18 09:00:00,CUST008,Hannah Montana,1998-12-05,Single,10000000000,-80000000,Debit,Online Music Store,60000000000,1000000000,Entertainment,False,High,Young Professional
+2024-06-20 11:00:00,CUST009,Indiana Jones,1955-07-01,Widowed,250000000000,-700000000,Debit,Investment Fund Contribution,200000000000,3000000000,Investments,False,nan,High Net Worth
+2024-06-25 08:00:00,CUST010,Jasmine Princess,1992-09-18,Married,40000600000,-150000000,Debit,Kids Toy Store,95000000000,1800000000,Groceries,True,Medium,Family
+2024-06-28 14:00:00,CUST011,Kevin McAllister,2000-08-26,Single,5000000000,-10000000,Debit,Vending Machine,30000000000,500000000,Shopping,False,High,Young Adult
+2024-06-30 10:00:00,CUST012,Leia Organa,1977-04-05,Married,120000000000,-250000000,Debit,Auto Insurance Premium,150000000000,2800000000,Bills,False,Low,Senior
+2024-07-01 08:30:00,CUST013,Mulan Hua,1996-01-30,Single,18000500000,-45000000,Debit,Sports Supplies,65000000000,1500000000,Entertainment,False,Medium,Young Professional
+2024-07-05 09:00:00,CUST014,Neo Anderson,1980-09-13,Single,70000000000,-100000000,Debit,Online Course Fee,120000000000,2000000000,Investments,False,Medium,Young Professional
+2024-07-08 11:00:00,CUST015,Olive Oyl,1950-10-29,Widowed,9500700000,-28000000,Debit,"Bakery ""SweetTreats""",30000000000,700000000,Groceries,False,Low,Senior
+2024-07-10 13:00:00,CUST016,Peter Pan,2003-12-01,Single,2000000000,-15000000,Debit,Movie Ticket,25000000000,400000000,Entertainment,False,High,Young Adult
+2024-07-12 14:00:00,CUST017,Queen Amidala,1975-06-15,Married,200000000000,-150000000,Debit,Fine Art Supplies,250000000000,4000000000,Shopping,False,nan,High Net Worth
+2024-07-15 08:00:00,CUST018,Robin Hood,1983-03-17,Single,12000800000,-200000000,Debit,Software Subscription,50000000000,900000000,Other,False,Medium,Young Professional
+2024-07-18 10:00:00,CUST019,Sleeping Beauty,1993-08-08,Married,30000000000,-70000000,Debit,Pharmacy Purchase,85000000000,1600000000,Groceries,False,Medium,Family
+2024-07-20 11:00:00,CUST020,Tarzan Jungle,1978-05-05,Single,50000000000,-100000000,Debit,Outdoor Gear Store,100000000000,2500000000,Travel,False,Medium,Young Professional
+2024-07-25 09:00:00,CUST021,Ursula Sea,1968-11-22,Divorced,18000200000,-50000000,Debit,Garden Center,40000000000,750000000,Other,False,High,Senior
+2024-07-28 14:00:00,CUST022,Aladdin Agrabah,1999-07-07,Single,3000000000,-15000000,Debit,Convenience Store,28000000000,550000000,Entertainment,False,High,Young Adult
+2024-07-30 10:00:00,CUST023,Belle Beauty,1991-04-17,Married,28000000000,-40000000,Debit,"Cafe ""Bookworm""",70000000000,1300000000,Entertainment,False,Medium,Young Professional
+2024-08-01 08:18:00,CUST001,Alice Wonderland,1990-05-20,Single,15230500000,-30000000,Debit,Pharmacy Purchase,75000000000,1200000000,Groceries,False,Medium,Young Professional
+2024-08-05 09:30:00,CUST002,Bob The Builder,1985-11-11,Married,58900750000,-75000000,Debit,Hardware Store,110000000000,3500000000,Bills,True,Low,Family
+2024-08-10 10:00:00,CUST004,Diana Prince,1995-08-01,Married,150000000000,-1200000000,Debit,Luxury Spa,180000000000,2500000000,Shopping,False,nan,High Net Worth
+2024-08-15 11:00:00,CUST006,Fiona Shrek,1988-07-10,Married,22000400000,-45000000,Debit,"Bakery ""SweetBites""",90000000000,2000000000,Bills,False,Medium,Family
+2024-08-18 09:00:00,CUST009,Indiana Jones,1955-07-01,Widowed,250000000000,-2000000000,Debit,Real Estate Investment Fee,200000000000,3000000000,Investments,False,nan,High Net Worth
+2024-08-20 10:00:00,CUST012,Leia Organa,1977-04-05,Married,120000000000,-150000000,Debit,Home Insurance Premium,150000000000,2800000000,Bills,False,Low,Senior
+2024-08-22 11:00:00,CUST013,Mulan Hua,1996-01-30,Single,18000500000,-60000000,Debit,Movie Ticket,65000000000,1500000000,Entertainment,False,Medium,Young Professional
+2024-08-25 08:00:00,CUST014,Neo Anderson,1980-09-13,Single,70000000000,-300000000,Debit,Cryptocurrency Purchase,120000000000,2000000000,Investments,False,Medium,Young Professional
+2024-08-26 10:00:00,CUST015,Olive Oyl,1950-10-29,Widowed,9500700000,-40000000,Debit,Butcher Shop,30000000000,700000000,Groceries,False,Low,Senior
+2024-08-28 14:00:00,CUST017,Queen Amidala,1975-06-15,Married,200000000000,-600000000,Debit,Art Supplies Store,250000000000,4000000000,Shopping,False,nan,High Net Worth
+2024-08-30 10:00:00,CUST018,Robin Hood,1983-03-17,Single,12000800000,-80000000,Debit,Online Service Fee,50000000000,900000000,Other,False,Medium,Young Professional
+2024-03-01 09:00:00,CUST024,Jack Sparrow,1982-12-12,Single,8000300000,-40000000,Debit,"Pub ""The Jolly Roger""",40000000000,850000000,Entertainment,False,High,Young Professional
+2024-03-03 10:00:00,CUST024,Jack Sparrow,1982-12-12,Single,8000300000,-15000000,Debit,Convenience Store,40000000000,850000000,Entertainment,False,High,Young Professional
+2024-03-05 11:00:00,CUST025,Elsa Arendelle,1994-07-21,Single,25000000000,-120000000,Debit,Online Fashion Store,70000000000,1400000000,Shopping,False,Medium,Young Professional
+2024-03-08 14:00:00,CUST026,Buzz Lightyear,1973-05-15,Married,60000500000,-300000000,Debit,Kids Activity Fee,100000000000,2100000000,Bills,True,Low,Family
+2024-03-10 09:00:00,CUST027,Cinderella,1998-02-02,Single,4000000000,-25000000,Debit,Shoe Store,35000000000,600000000,Shopping,False,High,Young Adult
+2024-03-12 10:00:00,CUST028,Dracula,1950-10-31,Single,15000000000,-70000000,Debit,Antique Shop,45000000000,800000000,Other,False,Medium,Senior
+2024-03-15 11:00:00,CUST029,Esmeralda,1990-11-20,Single,9000800000,-50000000,Debit,Dance Class Fee,50000000000,950000000,Entertainment,False,Medium,Young Professional
+2024-03-18 14:00:00,CUST030,Flash Gordon,1985-04-01,Married,35000000000,-250000000,Debit,Sports Equipment Store,80000000000,1800000000,Shopping,True,Medium,Family
+2024-03-20 15:00:00,CUST031,Gandhi,1969-10-02,Married,50000000000,-150000000,Debit,Charity Donation,90000000000,2000000000,Other,False,Low,Senior
+2024-03-22 10:00:00,CUST032,Harry Potter,1995-07-31,Single,12000000000,-80000000,Debit,"Bookstore ""The Daily Prophet""",60000000000,1100000000,Entertainment,False,High,Young Professional
+2024-03-25 11:00:00,CUST033,Katniss Everdeen,1992-05-08,Single,10000000000,-60000000,Debit,Outdoor Supplies,55000000000,1000000000,Travel,False,Medium,Young Professional
+2024-03-28 14:00:00,CUST034,Legolas,1988-01-25,Single,18000000000,-100000000,Debit,Archery Club Fee,70000000000,1500000000,Entertainment,False,Medium,Young Professional
+2024-03-30 15:00:00,CUST035,Mowgli,2005-06-12,Single,1000000000,-10000000,Debit,Snack Purchase,20000000000,300000000,Groceries,False,High,Young Adult
+2024-04-01 08:00:00,CUST024,Jack Sparrow,1982-12-12,Single,8000300000,-80000000,Debit,"Restaurant ""Seafood Shack""",40000000000,850000000,Entertainment,False,High,Young Professional
+2024-04-05 09:30:00,CUST025,Elsa Arendelle,1994-07-21,Single,25000000000,-200000000,Debit,Winter Clothing Store,70000000000,1400000000,Shopping,False,Medium,Young Professional
+2024-04-10 10:00:00,CUST026,Buzz Lightyear,1973-05-15,Married,60000500000,-150000000,Debit,Utilities Bill,100000000000,2100000000,Bills,True,Low,Family
+2024-04-15 11:00:00,CUST027,Cinderella,1998-02-02,Single,4000000000,-35000000,Debit,Public Transport Pass,35000000000,600000000,Shopping,False,High,Young Adult
+2024-04-20 14:00:00,CUST028,Dracula,1950-10-31,Single,15000000000,-120000000,Debit,Wine Merchant,45000000000,800000000,Other,False,Medium,Senior
+2024-04-25 15:00:00,CUST029,Esmeralda,1990-11-20,Single,9000800000,-70000000,Debit,Concert Ticket,50000000000,950000000,Entertainment,False,Medium,Young Professional
+2024-04-28 10:00:00,CUST030,Flash Gordon,1985-04-01,Married,35000000000,-100000000,Debit,Car Maintenance,80000000000,1800000000,Shopping,True,Medium,Family
+2024-05-01 08:30:00,CUST031,Gandhi,1969-10-02,Married,50000000000,-200000000,Debit,Healthcare Service,90000000000,2000000000,Other,False,Low,Senior
+2024-05-05 09:00:00,CUST032,Harry Potter,1995-07-31,Single,12000000000,-50000000,Debit,"Cafe ""The Leaky Cauldron""",60000000000,1100000000,Entertainment,False,High,Young Professional
+2024-05-10 11:00:00,CUST033,Katniss Everdeen,1992-05-08,Single,10000000000,-40000000,Debit,Ammunition Store,55000000000,1000000000,Travel,False,Medium,Young Professional
+2024-05-15 14:00:00,CUST034,Legolas,1988-01-25,Single,18000000000,-80000000,Debit,Outdoor Equipment,70000000000,1500000000,Entertainment,False,Medium,Young Professional
+2024-05-20 15:00:00,CUST035,Mowgli,2005-06-12,Single,1000000000,-5000000,Debit,Candy Store,20000000000,300000000,Groceries,False,High,Young Adult
+2024-06-01 08:40:00,CUST024,Jack Sparrow,1982-12-12,Single,8000300000,-60000000,Debit,Bait and Tackle Shop,40000000000,850000000,Entertainment,False,High,Young Professional
+2024-06-05 09:00:00,CUST025,Elsa Arendelle,1994-07-21,Single,25000000000,-80000000,Debit,Jewelry Store,70000000000,1400000000,Shopping,False,Medium,Young Professional
+2024-06-10 10:00:00,CUST026,Buzz Lightyear,1973-05-15,Married,60000500000,-70000000,Debit,"Grocery Store ""KidsChoice""",100000000000,2100000000,Bills,True,Low,Family
+2024-06-15 11:00:00,CUST027,Cinderella,1998-02-02,Single,4000000000,-15000000,Debit,"Bakery ""GlassSlipper Sweets""",35000000000,600000000,Shopping,False,High,Young Adult
+2024-06-20 14:00:00,CUST028,Dracula,1950-10-31,Single,15000000000,-90000000,Debit,Rare Book Store,45000000000,800000000,Other,False,Medium,Senior
+2024-06-25 15:00:00,CUST029,Esmeralda,1990-11-20,Single,9000800000,-40000000,Debit,Music Store,50000000000,950000000,Entertainment,False,Medium,Young Professional
+2024-06-28 10:00:00,CUST030,Flash Gordon,1985-04-01,Married,35000000000,-120000000,Debit,Electronics Store,80000000000,1800000000,Shopping,True,Medium,Family
+2024-07-01 08:00:00,CUST031,Gandhi,1969-10-02,Married,50000000000,-300000000,Debit,Investment Fund Contribution,90000000000,2000000000,Other,False,Low,Senior
+2024-07-05 09:00:00,CUST032,Harry Potter,1995-07-31,Single,12000000000,-200000000,Debit,Wizarding Supplies,60000000000,1100000000,Entertainment,False,High,Young Professional
+2024-07-10 11:00:00,CUST033,Katniss Everdeen,1992-05-08,Single,10000000000,-150000000,Debit,Survival Gear Store,55000000000,1000000000,Travel,False,Medium,Young Professional
+2024-07-15 14:00:00,CUST034,Legolas,1988-01-25,Single,18000000000,-90000000,Debit,Hiking Store,70000000000,1500000000,Entertainment,False,Medium,Young Professional
+2024-07-20 15:00:00,CUST035,Mowgli,2005-06-12,Single,1000000000,-25000000,Debit,Zoo Entry Fee,20000000000,300000000,Groceries,False,High,Young Adult
+2024-03-01 09:30:00,CUST036,Aladdin Agrabah Jr,2002-03-03,Single,2500000000,-35000000,Debit,"Arcade ""Magic Carpet Games""",22000000000,400000000,Entertainment,False,High,Young Adult
+2024-03-05 10:00:00,CUST037,Belle Beauty Sr,1960-01-17,Married,50000000000,-150000000,Debit,Book Club Fee,80000000000,1500000000,Entertainment,False,Low,Senior
+2024-03-08 11:00:00,CUST038,Captain Hook,1978-09-19,Single,7000000000,-60000000,Debit,Boat Supplies Store,45000000000,900000000,Other,False,High,Young Professional
+2024-03-10 14:00:00,CUST039,Cruella De Vil,1965-05-27,Divorced,120000000000,-500000000,Debit,Designer Clothing,150000000000,3000000000,Shopping,False,nan,Senior
+2024-03-15 08:00:00,CUST040,Darth Vader,1977-08-23,Married,90000000000,-400000000,Debit,Spacecraft Maintenance,130000000000,2500000000,Travel,True,Medium,Family
+2024-03-18 09:00:00,CUST041,Elsa Arendelle Jr,2001-12-22,Single,8000000000,-40000000,Debit,"Ice Cream Shop ""Frozen Delights""",30000000000,500000000,Entertainment,False,High,Young Adult
+2024-03-20 10:00:00,CUST042,Frodo Baggins,1980-09-22,Single,10000000000,-30000000,Debit,"Local Pub ""The Green Dragon""",50000000000,1000000000,Entertainment,False,Medium,Young Professional
+2024-03-25 11:00:00,CUST043,Gaston,1989-03-10,Single,6000000000,-70000000,Debit,Hunting Gear Store,40000000000,800000000,Shopping,False,High,Young Professional
+2024-03-28 14:00:00,CUST044,Hades,1975-07-15,Single,15000000000,-100000000,Debit,Underworld Souvenirs,55000000000,1100000000,Other,False,Medium,Young Professional
+2024-03-30 15:00:00,CUST045,Irene Adler,1986-02-07,Single,20000000000,-150000000,Debit,Theatre Tickets,70000000000,1300000000,Entertainment,False,Medium,Young Professional
+2024-04-01 08:00:00,CUST036,Aladdin Agrabah Jr,2002-03-03,Single,2500000000,-20000000,Debit,Snack Vendor,22000000000,400000000,Entertainment,False,High,Young Adult
+2024-04-05 09:00:00,CUST037,Belle Beauty Sr,1960-01-17,Married,50000000000,-80000000,Debit,Garden Supplies,80000000000,1500000000,Entertainment,False,Low,Senior
+2024-04-10 10:00:00,CUST038,Captain Hook,1978-09-19,Single,7000000000,-40000000,Debit,Fishing Gear,45000000000,900000000,Other,False,High,Young Professional
+2024-04-15 11:00:00,CUST039,Cruella De Vil,1965-05-27,Divorced,120000000000,-1000000000,Debit,Art Auction Purchase,150000000000,3000000000,Shopping,False,nan,Senior
+2024-04-20 14:00:00,CUST040,Darth Vader,1977-08-23,Married,90000000000,-150000000,Debit,Space Station Cafe,130000000000,2500000000,Travel,True,Medium,Family
+2024-04-25 15:00:00,CUST041,Elsa Arendelle Jr,2001-12-22,Single,8000000000,-15000000,Debit,Coffee Shop,30000000000,500000000,Entertainment,False,High,Young Adult
+2024-04-28 10:00:00,CUST042,Frodo Baggins,1980-09-22,Single,10000000000,-50000000,Debit,"Bakery ""The Shire Bakery""",50000000000,1000000000,Entertainment,False,Medium,Young Professional
+2024-05-01 08:00:00,CUST043,Gaston,1989-03-10,Single,6000000000,-30000000,Debit,"Bar ""Gaston's Tavern""",40000000000,800000000,Shopping,False,High,Young Professional
+2024-05-05 09:00:00,CUST044,Hades,1975-07-15,Single,15000000000,-80000000,Debit,Curiosity Shop,55000000000,1100000000,Other,False,Medium,Young Professional
+2024-05-10 11:00:00,CUST045,Irene Adler,1986-02-07,Single,20000000000,-100000000,Debit,Bookstore,70000000000,1300000000,Entertainment,False,Medium,Young Professional
+2024-03-01 10:00:00,CUST046,James Bond,1970-04-13,Single,100000000000,-500000000,Debit,Luxury Car Rental,150000000000,3000000000,Travel,False,Low,High Net Worth
+2024-03-05 11:00:00,CUST047,Katniss Everdeen Sr,1960-05-08,Married,70000000000,-300000000,Debit,Investment Advisory Fee,100000000000,2000000000,Investments,False,Low,Senior
+2024-03-08 12:00:00,CUST048,Lara Croft,1990-03-01,Single,30000000000,-150000000,Debit,Archaeology Supplies,75000000000,1500000000,Other,False,Medium,Young Professional
+2024-03-10 15:00:00,CUST049,Morpheus,1975-06-11,Single,40000000000,-200000000,Debit,Training Simulation Fee,80000000000,1800000000,Entertainment,False,Medium,Young Professional
+2024-03-15 09:00:00,CUST050,Nemo,2008-05-30,Single,500000000,-10000000,Debit,Fish Food Purchase,15000000000,200000000,Other,False,High,Young Adult
+2024-03-18 10:00:00,CUST051,Obi-Wan Kenobi,1955-12-25,Single,120000000000,-400000000,Debit,Meditation Retreat Fee,100000000000,2000000000,Travel,False,Low,Senior
+2024-03-20 11:00:00,CUST052,Pocahontas,1997-01-10,Single,8000000000,-30000000,Debit,Nature Reserve Entry,40000000000,750000000,Entertainment,False,High,Young Adult
+2024-03-25 14:00:00,CUST053,Quasimodo,1985-06-06,Single,5000000000,-25000000,Debit,Cathedral Souvenir Shop,35000000000,600000000,Other,False,High,Young Professional
+2024-03-28 15:00:00,CUST054,Rey Skywalker,1999-04-11,Single,7000000000,-50000000,Debit,Junk Trader Purchase,28000000000,500000000,Shopping,False,High,Young Adult
+2024-03-30 10:00:00,CUST055,Sherlock Holmes,1980-01-06,Single,15000000000,-80000000,Debit,Chemical Supplies Store,60000000000,1200000000,Other,False,Medium,Young Professional
+2024-04-01 08:00:00,CUST046,James Bond,1970-04-13,Single,100000000000,-150000000,Debit,Casino Entry,150000000000,3000000000,Travel,False,Low,High Net Worth
+2024-04-05 09:00:00,CUST047,Katniss Everdeen Sr,1960-05-08,Married,70000000000,-400000000,Debit,Pension Fund Contribution,100000000000,2000000000,Investments,False,Low,Senior
+2024-04-10 10:00:00,CUST048,Lara Croft,1990-03-01,Single,30000000000,-60000000,Debit,Museum Entry Fee,75000000000,1500000000,Other,False,Medium,Young Professional
+2024-04-15 11:00:00,CUST049,Morpheus,1975-06-11,Single,40000000000,-90000000,Debit,Virtual Reality Arcade,80000000000,1800000000,Entertainment,False,Medium,Young Professional
+2024-04-20 14:00:00,CUST050,Nemo,2008-05-30,Single,500000000,-5000000,Debit,Aquarium Supplies,15000000000,200000000,Other,False,High,Young Adult
+2024-04-25 15:00:00,CUST051,Obi-Wan Kenobi,1955-12-25,Single,120000000000,-100000000,Debit,Tea House Visit,100000000000,2000000000,Travel,False,Low,Senior
+2024-04-28 10:00:00,CUST052,Pocahontas,1997-01-10,Single,8000000000,-10000000,Debit,Park Entry Fee,40000000000,750000000,Entertainment,False,High,Young Adult
+2024-05-01 08:00:00,CUST053,Quasimodo,1985-06-06,Single,5000000000,-15000000,Debit,Book Store,35000000000,600000000,Other,False,High,Young Professional
+2024-05-05 09:00:00,CUST054,Rey Skywalker,1999-04-11,Single,7000000000,-20000000,Debit,Scrap Metal Purchase,28000000000,500000000,Shopping,False,High,Young Adult
+2024-05-10 11:00:00,CUST055,Sherlock Holmes,1980-01-06,Single,15000000000,-40000000,Debit,Tobacco Shop,60000000000,1200000000,Other,False,Medium,Young Professional
+2024-03-01 10:30:00,CUST056,Tony Stark,1970-05-29,Single,500000000000,-10000000000,Debit,Luxury Goods Store,500000000000,15000000000,Shopping,False,nan,High Net Worth
+2024-03-05 11:30:00,CUST057,Wonder Woman,1990-03-22,Single,40000000000,-200000000,Debit,Gym Membership,80000000000,1600000000,Entertainment,False,Medium,Young Professional
+2024-03-08 12:30:00,CUST058,Xena Warrior,1980-04-10,Single,30000000000,-150000000,Debit,Weapon Smith,70000000000,1400000000,Other,False,Medium,Young Professional
+2024-03-10 15:30:00,CUST059,Yoda,1950-01-01,Single,200000000000,-500000000,Debit,Meditation Supplies,100000000000,2000000000,Travel,False,Low,Senior
+2024-03-15 09:30:00,CUST060,Zorro,1988-11-11,Single,15000000000,-70000000,Debit,Horse Riding Gear,55000000000,1000000000,Entertainment,False,Medium,Young Professional
+2024-03-18 10:30:00,CUST061,Ariel Mermaid,2003-11-17,Single,1000000000,-20000000,Debit,Seashell Collection Shop,20000000000,300000000,Shopping,False,High,Young Adult
+2024-03-20 11:30:00,CUST062,Batman,1975-02-19,Single,300000000000,-5000000000,Debit,Wayne Enterprises Expense,250000000000,10000000000,Other,False,nan,High Net Worth
+2024-03-25 14:30:00,CUST063,Captain America,1980-07-04,Married,80000000000,-300000000,Debit,Gym Membership,110000000000,2200000000,Entertainment,True,Low,Family
+2024-03-28 15:30:00,CUST064,Daenerys Targaryen,1990-05-15,Single,20000000000,-150000000,Debit,Pet Store (for Dragons),70000000000,1300000000,Other,False,Medium,Young Professional
+2024-03-30 10:30:00,CUST065,Elastigirl,1978-12-01,Married,50000000000,-200000000,Debit,Kids School Fees,90000000000,1800000000,Bills,True,Medium,Family
+2024-04-01 08:00:00,CUST056,Tony Stark,1970-05-29,Single,500000000000,-15000000000,Debit,Private Jet Fuel,500000000000,15000000000,Travel,False,nan,High Net Worth
+2024-04-05 09:00:00,CUST057,Wonder Woman,1990-03-22,Single,40000000000,-80000000,Debit,Amazonian Supplies,80000000000,1600000000,Entertainment,False,Medium,Young Professional
+2024-04-10 10:00:00,CUST058,Xena Warrior,1980-04-10,Single,30000000000,-60000000,Debit,Armour Maintenance,70000000000,1400000000,Other,False,Medium,Young Professional
+2024-04-15 11:00:00,CUST059,Yoda,1950-01-01,Single,200000000000,-300000000,Debit,Swamp Navigation Gear,100000000000,2000000000,Travel,False,Low,Senior
+2024-04-20 14:00:00,CUST060,Zorro,1988-11-11,Single,15000000000,-40000000,Debit,Mask & Cape Supplies,55000000000,1000000000,Entertainment,False,Medium,Young Professional
+2024-04-25 15:00:00,CUST061,Ariel Mermaid,2003-11-17,Single,1000000000,-10000000,Debit,Ocean Decor,20000000000,300000000,Shopping,False,High,Young Adult
+2024-04-28 10:00:00,CUST062,Batman,1975-02-19,Single,300000000000,-2000000000,Debit,Batcave Equipment,250000000000,10000000000,Other,False,nan,High Net Worth
+2024-05-01 08:00:00,CUST063,Captain America,1980-07-04,Married,80000000000,-150000000,Debit,Training Supplies,110000000000,2200000000,Entertainment,True,Low,Family
+2024-05-05 09:00:00,CUST064,Daenerys Targaryen,1990-05-15,Single,20000000000,-80000000,Debit,Dragon Training Manual,70000000000,1300000000,Other,False,Medium,Young Professional
+2024-05-10 11:00:00,CUST065,Elastigirl,1978-12-01,Married,50000000000,-100000000,Debit,Stretchy Fabric Store,90000000000,1800000000,Bills,True,Medium,Family
+2024-03-01 11:00:00,CUST066,Flash (Barry Allen),1993-03-14,Single,10000000000,-20000000,Debit,"Coffee Shop ""Central Perk""",60000000000,1200000000,Entertainment,False,High,Young Professional
+2024-03-05 12:00:00,CUST067,Groot,2000-01-01,Single,2000000000,-5000000,Debit,Fertilizer Purchase,25000000000,300000000,Other,False,High,Young Adult
+2024-03-08 13:00:00,CUST068,Hulk,1970-12-18,Single,30000000000,-500000000,Debit,Gym Equipment,80000000000,1500000000,Entertainment,False,Medium,Young Professional
+2024-03-10 16:00:00,CUST069,Iron Man,1970-05-29,Single,400000000000,-8000000000,Debit,Armor Upgrades,400000000000,12000000000,Other,False,nan,High Net Worth
+2024-03-15 10:00:00,CUST070,Joker,1975-08-01,Single,5000000000,-30000000,Debit,Costume Supplies,30000000000,600000000,Entertainment,False,High,Young Professional
+2024-04-01 08:00:00,CUST066,Flash (Barry Allen),1993-03-14,Single,10000000000,-15000000,Debit,Donut Shop,60000000000,1200000000,Entertainment,False,High,Young Professional
+2024-04-05 09:00:00,CUST067,Groot,2000-01-01,Single,2000000000,-10000000,Debit,Plant Pot Purchase,25000000000,300000000,Other,False,High,Young Adult
+2024-04-10 10:00:00,CUST068,Hulk,1970-12-18,Single,30000000000,-200000000,Debit,Therapy Session,80000000000,1500000000,Entertainment,False,Medium,Young Professional
+2024-04-15 11:00:00,CUST069,Iron Man,1970-05-29,Single,400000000000,-5000000000,Debit,High-Tech Gadget,400000000000,12000000000,Other,False,nan,High Net Worth
+2024-04-20 14:00:00,CUST070,Joker,1975-08-01,Single,5000000000,-25000000,Debit,Prank Supplies,30000000000,600000000,Entertainment,False,High,Young Professional
+2024-05-01 08:00:00,CUST066,Flash (Barry Allen),1993-03-14,Single,10000000000,-10000000,Debit,Pizza Place,60000000000,1200000000,Entertainment,False,High,Young Professional
+2024-05-05 09:00:00,CUST067,Groot,2000-01-01,Single,2000000000,-8000000,Debit,Sunlight Lamp,25000000000,300000000,Other,False,High,Young Adult
+2024-05-10 10:00:00,CUST068,Hulk,1970-12-18,Single,30000000000,-100000000,Debit,Anger Management Book,80000000000,1500000000,Entertainment,False,Medium,Young Professional
+2024-05-15 11:00:00,CUST069,Iron Man,1970-05-29,Single,400000000000,-3000000000,Debit,Lab Equipment,400000000000,12000000000,Other,False,nan,High Net Worth
+2024-05-20 14:00:00,CUST070,Joker,1975-08-01,Single,5000000000,-15000000,Debit,Card Shop,30000000000,600000000,Entertainment,False,High,Young Professional
+2024-06-01 08:00:00,CUST066,Flash (Barry Allen),1993-03-14,Single,10000000000,-5000000,Debit,Smoothie Bar,60000000000,1200000000,Entertainment,False,High,Young Professional
+2024-06-05 09:00:00,CUST067,Groot,2000-01-01,Single,2000000000,-12000000,Debit,Watering Can,25000000000,300000000,Other,False,High,Young Adult
+2024-06-10 10:00:00,CUST068,Hulk,1970-12-18,Single,30000000000,-75000000,Debit,Stress Ball Purchase,80000000000,1500000000,Entertainment,False,Medium,Young Professional
+2024-06-15 11:00:00,CUST069,Iron Man,1970-05-29,Single,400000000000,-1000000000,Debit,Gadget Testing Fee,400000000000,12000000000,Other,False,nan,High Net Worth
+2024-06-20 14:00:00,CUST070,Joker,1975-08-01,Single,5000000000,-10000000,Debit,Party Supplies,30000000000,600000000,Entertainment,False,High,Young Professional
+2024-07-01 08:00:00,CUST066,Flash (Barry Allen),1993-03-14,Single,10000000000,-8000000,Debit,Ice Cream Shop,60000000000,1200000000,Entertainment,False,High,Young Professional
+2024-07-05 09:00:00,CUST067,Groot,2000-01-01,Single,2000000000,-7000000,Debit,Soil Purchase,25000000000,300000000,Other,False,High,Young Adult
+2024-07-10 10:00:00,CUST068,Hulk,1970-12-18,Single,30000000000,-50000000,Debit,Juice Bar,80000000000,1500000000,Entertainment,False,Medium,Young Professional
+2024-07-15 11:00:00,CUST069,Iron Man,1970-05-29,Single,400000000000,-2000000000,Debit,Research Materials,400000000000,12000000000,Other,False,nan,High Net Worth
+2024-07-20 14:00:00,CUST070,Joker,1975-08-01,Single,5000000000,-5000000,Debit,Balloon Store,30000000000,600000000,Entertainment,False,High,Young Professional
+2024-08-01 08:00:00,CUST066,Flash (Barry Allen),1993-03-14,Single,10000000000,-12000000,Debit,Deli,60000000000,1200000000,Entertainment,False,High,Young Professional
+2024-08-05 09:00:00,CUST067,Groot,2000-01-01,Single,2000000000,-6000000,Debit,Flower Pot,25000000000,300000000,Other,False,High,Young Adult
+2024-08-10 10:00:00,CUST068,Hulk,1970-12-18,Single,30000000000,-30000000,Debit,Smoothie Place,80000000000,1500000000,Entertainment,False,Medium,Young Professional
+2024-08-15 11:00:00,CUST069,Iron Man,1970-05-29,Single,400000000000,-1500000000,Debit,Components Purchase,400000000000,12000000000,Other,False,nan,High Net Worth
+2024-08-20 14:00:00,CUST070,Joker,1975-08-01,Single,5000000000,-8000000,Debit,Magic Shop,30000000000,600000000,Entertainment,False,High,Young Professional
