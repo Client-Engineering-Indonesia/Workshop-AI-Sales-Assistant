@@ -127,3 +127,5 @@ Tahap 15: Perhatikan respon yang diberikan dari Agent.
 🚀 Congratulations! You have successfully created an AI-powered Supplier Research Agent.  Happy Coding! 🎯
 
 -----
+
+<img width="1115" alt="image" src="https://github.com/user-attachments/assets/d0099ed6-bf43-4e40-8883-fd1e11e83dc5" />
