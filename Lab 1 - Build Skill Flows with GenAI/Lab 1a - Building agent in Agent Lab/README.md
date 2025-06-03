@@ -1,131 +1,121 @@
-### Membuat AI Agent dengan wx.ai Agent Lab
+# Membuat AI Agent dengan wx.ai Agent Lab
 
-Pada lab ini, anda akab membuat Supplier Researcher Agent dengan menggunakan “watsonx.AI Agent Lab”. Lab imi akan membuat anda melakukan riset untuk memlih suppliers untuk melakukan procurement pada Xtralife berdasarkan data lampau dari performa supplier, procurement rules, dan review dari pelanggan.
+Pada lab ini, Anda akan membuat *Supplier Researcher Agent* menggunakan **watsonx.AI Agent Lab**. Lab ini akan membantu Anda melakukan riset untuk memilih supplier untuk procurement pada Xtralife berdasarkan data performa supplier, procurement rules, dan review pelanggan.
 
-Tahap untuk membuat Agent
+## Tahapan Membuat Agent
 
-#### Step 1: Create a Project Tahap 1: Membuat Project
-- Apabila ini pertama kalinya anda menggunakan account ini. Anda harus membuat project sebelum menggunakan Agent Lab
+### Step 1 — Create a Project
+- Apabila ini pertama kalinya Anda menggunakan akun ini, Anda harus membuat project sebelum menggunakan Agent Lab.
 
-<img width="1115" alt="image" src="https://github.com/user-attachments/assets/f8e14b8a-ad96-4619-8906-dd85231cc87c" />
+![Create Project](https://github.com/user-attachments/assets/f8e14b8a-ad96-4619-8906-dd85231cc87c)
 
-#### Tahap 2: Mengasosiasikan  Watsonx.ai Service
-- Setelah membuat project, klik Manage → Services & Integrations → Associate Service.
-- Pilih watsonx.ai dan asosiasikan service watsonx.ai runtime.
+### Step 2 — Mengasosiasikan Watsonx.ai Service
+- Setelah membuat project, klik **Manage → Services & Integrations → Associate Service**.
+- Pilih **watsonx.ai** dan asosiasikan service **watsonx.ai runtime**.
 
-<img width="1115" alt="image" src="https://github.com/user-attachments/assets/ea9b3a8e-558a-458a-90db-c43e7bf4bb88" />
+![Associate Service](https://github.com/user-attachments/assets/ea9b3a8e-558a-458a-90db-c43e7bf4bb88)
 
-#### Tahap 3: Tambahkan New Asset
-- Pergi ke halaman Assets tab dan klik New Asset.
+### Step 3 — Tambahkan *New Asset*
+- Pergi ke tab **Assets** dan klik **New Asset**.
 
-<img width="1137" alt="image" src="https://github.com/user-attachments/assets/1c610009-1f58-4e47-8b79-1fe936c38e47" />
+![New Asset](https://github.com/user-attachments/assets/1c610009-1f58-4e47-8b79-1fe936c38e47)
 
-#### Tahap 4: Buat In-memory vector store.
-- Pilih "Ground Gen AI with Vectorized Documents" dan klik to create an In-Memory Vector Store.
+### Step 4 — Buat *In‑memory vector store*
+- Pilih **Ground Gen AI with Vectorized Documents** dan klik untuk membuat *In‑Memory Vector Store*.
 
-<img width="1115" alt="image" src="https://github.com/user-attachments/assets/ada8a269-9da9-4f6e-be74-326c2ddaabb8" />
+![Vector Store](https://github.com/user-attachments/assets/ada8a269-9da9-4f6e-be74-326c2ddaabb8)
 
-#### Tahap 5: Pilih Vector Index Type
-- Klik “Ground Gen AI with Vectorized Documents”
-- Anda akan melihat terhadap tiga opsi untuk membuat vector index: 
-  In-Memory
-  Watsonx.data (Milvus)
-  Elasticsearch (ES)
-- Untuk lab ini, pilih In-Memory
+### Step 5 — Pilih *Vector Index Type*
+- Klik **Ground Gen AI with Vectorized Documents**.
+- Akan muncul tiga opsi untuk membuat *vector index*:
+  1. In‑Memory
+  2. watsonx.data (Milvus)
+  3. Elasticsearch (ES)
+- Untuk lab ini, pilih **In‑Memory**.
 
-<img width="1115" alt="image" src="https://github.com/user-attachments/assets/70e5b651-211b-4a2f-97b6-321a690efd6c" />
+![Vector Index Type](https://github.com/user-attachments/assets/70e5b651-211b-4a2f-97b6-321a690efd6c)
 
-#### Tahap 6: Upload dokumen dan konfigurasi indeks nya.
-- Upload document ke vector index creation menggunakan browse.
-  Procurement Requisition Rules.docx
-  Supplier Sales Report for Procurement.docx
-- Berikan nama untuk vector index yang telah dibuat
-- Click on Advanced Settings to configure the following:
-- Klik Advanced Settings dan konfigurasikan hal berikut:
-  Embeddings Model: Pilih “all-MiniLM-L6-v2” embedding models. Terdapat beberapa opsi embedding model lainnya.  (Secara default: granite-embaddings-107m-multilingual)
-  Pilih Indexing Parameters seperti Text Chunk Size and Text Chunk Overlap
-- Klik create untuk membuat vector index.
+### Step 6 — Upload Dokumen & Konfigurasi Indeks
+- Upload dokumen ke vector index:
+  - `Procurement Requisition Rules.docx`
+  - `Supplier Sales Report for Procurement.docx`
+- Berikan nama untuk vector index.
+- Klik **Advanced Settings** untuk mengatur:
+  - **Embeddings Model** → pilih `all-MiniLM-L6-v2` (default: `granite-embeddings-107m-multilingual`).
+  - **Indexing Parameters** seperti *Text Chunk Size* dan *Text Chunk Overlap*.
+- Klik **Create**.
 
-<img width="1115" alt="image" src="https://github.com/user-attachments/assets/0833c63e-a079-4126-92ab-f2b5451d3415" />
+![Upload & Configure](https://github.com/user-attachments/assets/0833c63e-a079-4126-92ab-f2b5451d3415)
 
-#### Step 7: View Vector Index Details
-Tahap 7: Lihat details pada Vector Index
-- Ketika index telah dibuat. Tampila seperti pada screenshot dibawah dapat terlihat.
+### Step 7 — View Vector Index Details
+- Setelah index dibuat, tampilannya akan terlihat seperti berikut.
 
-<img width="1115" alt="image" src="https://github.com/user-attachments/assets/69afa420-8899-428f-8377-9d6bb676ec82" />
+![Vector Index Details](https://github.com/user-attachments/assets/69afa420-8899-428f-8377-9d6bb676ec82)
 
-Kembali ke bagian Project/Assets dan lanjutkan ketahapan selanjutnya.
+Kembali ke **Project → Assets** dan lanjutkan ke tahapan berikutnya.
 
-#### Tahap 8: Buat AI Agent
-- Klik New Asset pada sisi kiri dan cari  "Build an AI Agent to Automate Tasks". Terakhir, klik “Build an AI agent to automate tasks”.
+### Step 8 — Buat AI Agent
+- Klik **New Asset** di sisi kiri dan pilih **Build an AI Agent to Automate Tasks**.
 
-<img width="1115" alt="image" src="https://github.com/user-attachments/assets/c6dde849-5455-45a8-a82d-9cd11b135933" />
+![Build AI Agent](https://github.com/user-attachments/assets/c6dde849-5455-45a8-a82d-9cd11b135933)
 
-#### Tahap 9: Berikan nama untuk Agent tersebut
-- Klik Build an AI Agent to Automate Tasks dan berikan nama untuk agent yang akan dibuat
+### Step 9 — Beri Nama Agent
 
-<img width="1115" alt="image" src="https://github.com/user-attachments/assets/4d67bd24-299c-420c-872f-a62d115c9e9c" />
+![Name Agent](https://github.com/user-attachments/assets/4d67bd24-299c-420c-872f-a62d115c9e9c)
 
-Anda dapat melihat informasi terkait dengan LLM, Framework, Arsitektur, etc. Untuk mengembangkan pemahaman anda.
+### Step 10 — Tambahkan Tools untuk Agent
+- Klik **Add Tool** untuk melihat daftar tool.
 
-#### Tahap 10: Tambahkan Tools untuk Agent anda
-- Klik pada Add Tool untuk melihat daftar tool yang tersedia pada selection panel
+![Add Tool](https://github.com/user-attachments/assets/31d08bd7-606c-4d93-8eab-47ea54a56f55)
 
-<img width="1115" alt="image" src="https://github.com/user-attachments/assets/31d08bd7-606c-4d93-8eab-47ea54a56f55" />
+### Step 11 — Hubungkan Vector Index
+- Toggle **Document Search** agar aktif.
+- Pada dropdown, pilih vector index yang telah dibuat.
+- Klik **Select**.
 
-#### Tahap 11: Hubungkan Vector Index
-•	Toggle Document Search agar bisa digunakan
-•	Pada dropdown menu, Pilih vector index yang telah dibuat sebelumnya.
-•	Klik Select untuk menggunakannya. 
+![Connect Vector Index](https://github.com/user-attachments/assets/31f395dd-295a-4cc2-810f-e1c5be2ff17d)
 
-<img width="1115" alt="image" src="https://github.com/user-attachments/assets/31f395dd-295a-4cc2-810f-e1c5be2ff17d" />
+### Step 12 — Tambahkan *Additional Tools*
+- Tambahkan **Google Search** sebagai tool tambahan.
+- Panel tool kini menampilkan **Document Search** dan **Google Search**.
 
-#### Tahap 12: Tambahkan Additional Tools
-- Buat tool Google Search sebagai tool tambahan untuk agent yang digunakan.
-- Tool panel sekarang telah menayala untuk Document Search dan Google Search Tool
-- Tutup tampilan tool.
- 
-<img width="1115" alt="image" src="https://github.com/user-attachments/assets/165e3604-aa31-4657-ac75-b20cea4d0c54" />
+![Additional Tools](https://github.com/user-attachments/assets/165e3604-aa31-4657-ac75-b20cea4d0c54)
 
-#### Step 13: Configure the Agent Model and Parameters
-- Sesuaikan Foundation Model, Prompt, dan parameter lain sesuai dengan kebutuhan.
+### Step 13 — Konfigurasi Model & Parameter Agent
+Sesuaikan **Foundation Model**, *system prompt*, dan parameter lain. Contoh prompt:
 
-Berikut adalah Prompt yang dapat kamu gunakan:
+```text
+Kamu adalah researcher untuk memilih supplier yang akan menggunakan tools untuk menjawab pertanyaan yang diberikan secara tepat berdasarkan riset pada Google dan Document Search.
 
-`Kamu adalah researcher untuk memilih supplier yang akan menggunakan tools untuk menjawab pertanyaan yang diberikan secara tepat berdasarkan riset pada google dan document search.
-1. Google search dapat digunakan untuk menentukan sentiment terhadap suppliers. Serta pertanyaan umum lainnya yang tidak terkait dengan topik pada Document Search.
-- Contoh: “Review dan customer sentiment untuk Suppliers A untuk produk X” dan “Review dan customer sentiment untuk Suppliers B untuk produk X”
-2. Document Search memliki peraturan yang diberikan untuk menentukan suppliers. Gunakan  untuk mencari informasi terkait peraturan procurement dan laporan penjualan Global Office Supplies dan Excelentia Supplies. Selain itu gunakan Document Search.
-- Contoh: "supplier A vs supplier B for X product`	
+1. Google Search dapat digunakan untuk menentukan sentimen terhadap suppliers serta pertanyaan umum lain yang tidak terkait Document Search.
+   Contoh: “Review dan customer sentiment untuk Suppliers A untuk produk X” dan “Review dan customer sentiment untuk Suppliers B untuk produk X”.
+2. Document Search memiliki peraturan yang diberikan untuk menentukan suppliers dan laporan penjualan Global Office Supplies serta Excelentia Supplies.
+   Contoh: "supplier A vs supplier B for X product"
+```
 
-<img width="1115" alt="image" src="https://github.com/user-attachments/assets/1a776d51-c2b4-4966-a22f-2dc17c08bb43" />
+![Configure Prompt](https://github.com/user-attachments/assets/1a776d51-c2b4-4966-a22f-2dc17c08bb43)
 
-#### Tahap 14: Test Agent mu.
-- Start querying your agent with example questions, such as:
-- Mulai query dengan agent mu menggunakan contoh dibawah ini:
-  `Pemasok mana dari Excelentia Supplies dan Global Office Supplies yang layak untuk membeli produk Xtralife. Berikan daftar kelebihan dan kekurangan masing-masing pemasok`
-  `Pemasok mana yang harus saya pilih? Saya ingin pengiriman yang cepat`
+### Step 14 — Test Agent
+Coba pertanyaan berikut:
 
-<img width="1115" alt="image" src="https://github.com/user-attachments/assets/1271f6e9-199b-4619-a2bd-d150fe40ca49" />
+- `Pemasok mana dari Excelentia Supplies dan Global Office Supplies yang layak untuk membeli produk Xtralife. Berikan daftar kelebihan dan kekurangan masing-masing pemasok.`
+- `Pemasok mana yang harus saya pilih? Saya ingin pengiriman yang cepat.`
 
-#### Step 15: View the Agent's Response
-Tahap 15: Perhatikan respon yang diberikan dari Agent. 
-- AI Agent akan membuat jawaban berdasarkan data yang berada pada index.
+![Test Agent](https://github.com/user-attachments/assets/1271f6e9-199b-4619-a2bd-d150fe40ca49)
 
-<img width="1115" alt="image" src="https://github.com/user-attachments/assets/79472629-ab91-4eda-a54e-759e6a0b6061" />
+### Step 15 — Lihat Respon Agent
 
-#### Tahap 16: Simpan Agent
-- Klik SaveAs untuk menyimpan agent yang telah dibuat.
+![Agent Response](https://github.com/user-attachments/assets/79472629-ab91-4eda-a54e-759e6a0b6061)
 
-<img width="1115" alt="image" src="https://github.com/user-attachments/assets/0c12708d-c016-4372-b895-41e7df6a6fb9" />
+### Step 16 — Simpan Agent
 
-#### Tahap 17: Export the Agent
-- Simpan agent ke dalam notebook atau editable file untuk modifikasi lebih lanjut nantinya.
+![Save Agent](https://github.com/user-attachments/assets/0c12708d-c016-4372-b895-41e7df6a6fb9)
 
-<img width="1115" alt="image" src="https://github.com/user-attachments/assets/3facf470-e766-49b7-a694-85dd60d759a3" />
+### Step 17 — Export Agent
+- Simpan agent ke dalam notebook atau file yang bisa diedit untuk modifikasi selanjutnya.
 
-🚀 Congratulations! You have successfully created an AI-powered Supplier Research Agent.  Happy Coding! 🎯
+![Export Agent](https://github.com/user-attachments/assets/3facf470-e766-49b7-a694-85dd60d759a3)
 
------
+---
 
-<img width="1115" alt="image" src="https://github.com/user-attachments/assets/d0099ed6-bf43-4e40-8883-fd1e11e83dc5" />
+![Rocket](https://github.com/user-attachments/assets/d0099ed6-bf43-4e40-8883-fd1e11e83dc5)
