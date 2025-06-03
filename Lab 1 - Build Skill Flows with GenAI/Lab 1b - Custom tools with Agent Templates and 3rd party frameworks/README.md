@@ -1,51 +1,79 @@
-### Membuat AI Agent dengan watsonx.ai dan crew
+# Membuat AI Agent dengan **watsonx.ai** & **Crew AI**
 
-Pada lab ini, kita akan membuat Sales Analyzer Agent  menggunakan watsonx.AI dan Crew AI. Agent tersebut akan digunakan untuk melakukan analisisi salaes data dari suatu produk untuk melakukan proses procurement.
+Pada lab ini, kita akan membuat **Sales Analyzer Agent** dengan memanfaatkan *watsonx.AI Agent Lab* dan framework **Crew AI**. Agent ini akan menganalisis data penjualan sebuah produk untuk membantu proses procurement.
 
-Notes: File yang digunakan merupakan file yang dapat di-download dari folder “”
-Tahapan untuk membuat Agent
+> **Catatan** File‐file yang diperlukan dapat diunduh dari folder “📂 *to‑be‑provided*”.
 
-#### Step 1: Membuat “Project”
-- Jika ini pertama kali anda menggunakan account ini. Maka anda perlu membuat project sebelum menggunakan Agent Lab. Selain itu, anda dapat menggunakan project yang telah ada.
+---
 
+## Tahapan Pembuatan Agent
 
-#### Tahap 2: Mengasosiasikan watsonx.Ai dengan watsonx.ai Runtime.
-- Setelah membuat project, buka  Manage → Services & Integrations → Associate Service.
-- Pilih watsonx.ai dan asosiasikan dengan project yang ada.
- 
+### Step 1 — Membuat *Project*
+1. Jika ini pertama kali Anda menggunakan akun ini, buatlah **Project** baru sebelum membuka Agent Lab. 
+2. Jika sudah punya, Anda boleh memakai project yang ada.
 
-#### Step 3: Add a New Asset Tahap 3: Tambahkan Asset Baru
-- Pergi ke halaman Assets Tab dan klik New Asset
+![Project](https://github.com/user-attachments/assets/1282049d-f55e-47f6-9ff9-e176dd3e4af8)
 
- 
+---
 
-#### Step 4: Create the notebooks Tahap 4: Buat notebooknya.
-- Cari "Work with data and models in Python or R notebooks"  dan klik “Create a notebook”
+### Step 2 — Mengasosiasikan watsonx.ai Runtime
+1. Buka **Manage → Services & Integrations → Associate Service**.
+2. Pilih **watsonx.ai** lalu kaitkan dengan project.
 
- 
-#### Tahap 5: Upload files yang telah diberikan
-- Klik “Local File.”
-- Upload notebook untuk “work with data and models in Python or R notebooks” menggunakan Browse 
-  SalesAnalysis.ipynb
-  SalesAnalysis_query.ipynb
-- Klik Create untuk membuat notebook
- 
- 
+![Associate Service](https://github.com/user-attachments/assets/3e22c81c-288c-445c-a5c8-6cffb5976012)
 
-#### Step 6: Konfigurasikan API Key pada notebook
-- Masukan key yang dibutuhkan untuk dapat menjalankan notebook.
-- Buat IBM Cloud API Key atau dapatkan dari anggota tim lainnya dan ubah parameter “api_key” untuk menggunakan LLM . Lalu, verifikasikan api_base sesuai dengan instans watsonx yang disediakan
-- DB_Password dapat ditemukan di “DB Connection Details.boxnote”
+---
 
- 
-- Anda juga dapat membuat API key pada homepage. Anda dapat menyimpan api_key pada local machine anda untuk penggunaan selanjutnya.
+### Step 3 — Menambahkan *Asset* Baru
+1. Masuk ke tab **Assets** dan klik **New Asset**.
 
- 
+![New Asset](https://github.com/user-attachments/assets/dda99a0c-7240-40e7-a747-428d6bc2d06b)
 
-#### Step 7: Run the notebook
-- Ikuti setiap cells yang terdapat pada notebook dan jalankan agent untuk melakukan analisis sales. Beberapa query telah diberikan dan dijadikan “comment”  untuk dilakukan pengetesan pada hasilnya.
+---
 
- 
-🚀 Congratulations! You have successfully created an AI-powered Sales analyzer Agent powered by watsonx.ai and crew.ai.  Happy Coding! 🎯
+### Step 4 — Membuat Notebook
+1. Pilih **Work with data and models in Python or R notebooks**.
+2. Tekan **Create a notebook**.
 
-----
+![Create Notebook](https://github.com/user-attachments/assets/a921bad3-bfa5-4f4a-8b92-785f1a1c859a)
+
+---
+
+### Step 5 — Meng‑*upload* Notebook
+1. Klik **Local File**.
+2. Unggah file:  
+   • `SalesAnalysis.ipynb`  
+   • `SalesAnalysis_query.ipynb`
+3. Klik **Create** untuk menyelesaikan.
+
+![Upload Notebook](https://github.com/user-attachments/assets/99702f15-60bb-451e-9553-02ce43629a34)
+
+![Notebook List](https://github.com/user-attachments/assets/1fd1dd77-c63d-4e54-9199-f60c115f8ef7)
+
+---
+
+### Step 6 — Mengonfigurasi API Key
+1. Masukkan kunci yang diperlukan di sel konfigurasi.
+2. Buat **IBM Cloud API Key** baru *atau* gunakan milik tim, lalu isi parameter `api_key`.
+3. Pastikan `api_base` sesuai dengan instans watsonx Anda.
+4. `DB_Password` tersedia di *DB Connection Details.boxnote*.
+
+![API Key](https://github.com/user-attachments/assets/bc611d4d-18ea-4d1f-bf0b-5997581d987e)
+
+> Anda juga dapat membuat API key melalui beranda IBM Cloud dan menyimpannya di mesin lokal.
+
+![Create Key](https://github.com/user-attachments/assets/9d1f90ef-4da0-493b-bcca-07887e609c56)
+
+---
+
+### Step 7 — Menjalankan Notebook
+1. Eksekusi sel‐sel notebook secara berurutan.
+2. Beberapa kueri uji sudah disediakan sebagai komentar—hapus `#` dan jalankan untuk menguji hasil.
+
+![Run Notebook](https://github.com/user-attachments/assets/7a5fedd0-7f73-40db-a5eb-4cfdcb92bdce)
+
+---
+
+## 🎉 Selesai!
+Selamat! Anda telah berhasil membuat **Sales Analyzer Agent** berbasis **watsonx.ai** dan **Crew AI**.  
+Happy Coding! 🚀🎯
