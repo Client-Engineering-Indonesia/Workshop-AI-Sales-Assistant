@@ -76,64 +76,70 @@ Happy Coding! 🚀🎯
 ## Lab 2 — Menghubungkan AI Agent ke watsonx Orchestrate
 
 ### Tujuan
-Solusi rule‑based atau AI generatif saja sering tidak cukup untuk menangani alur kerja kompleks yang melibatkan banyak langkah. Dengan **watsonx Orchestrate**, kita dapat menggabungkan beberapa AI agent—masing‑masing dirancang untuk tugas spesifik—ke dalam satu orkestrator yang mengotomatisasi proses end‑to‑end.
+Solusi berbasis *rule* maupun AI generatif saja tidak selalu cukup untuk alur kerja kompleks yang terdiri dari banyak langkah. Dengan **watsonx Orchestrate**, kita dapat menggabungkan beberapa AI agent—masing‑masing untuk tugas spesifik—ke dalam satu orkestrator guna mengotomatisasi proses end‑to‑end.
 
-Pada lab ini Anda akan menghubungkan AI agent (yang berjalan di **Code Engine**, mirip konsep AWS Lambda) ke watsonx Orchestrate. Syaratnya: agent harus menyediakan endpoint **`POST /chat/completions`** sesuai spesifikasi Orchestrate.
+Lab ini menunjukkan cara mengintegrasikan AI agent (yang berjalan di **IBM Code Engine**, konsepnya mirip AWS Lambda) ke watsonx Orchestrate. Syaratnya: agent harus menyediakan endpoint **`POST /chat/completions`** sebagaimana spesifikasi Orchestrate.
 
-> **Arsitektur singkat**: Backend Python FastAPI di Code Engine memanggil endpoint `ai_service` & `ai_service_stream` dari AI agent. Diagram alur:
->
-> ![Diagram](https://github.com/user-attachments/assets/2104bca3-01c9-4680-9958-264db0c306a8)
+Sebuah backend **Python FastAPI** (di Code Engine) memanggil endpoint `ai_service` dan `ai_service_stream` dari AI agent. Diagram alur:
+
+![Diagram Alur](https://github.com/user-attachments/assets/fad84b8d-cad6-4e5e-bd3e-bae06a1cef70)
 
 ---
 
 ### Step 0 — Menyiapkan Aplikasi AI di watsonx.ai
-Agar fokus pada integrasi, sebuah AI agent lengkap (dengan Google Search & Document Search) sudah disediakan. Lihat dokumentasi repositori untuk detail implementasi.
+Untuk menghemat waktu, sebuah AI agent lengkap—dilengkapi **Google Search** dan **Document Search**—sudah disediakan. Lihat dokumentasi repositori untuk detail implementasi.
 
-### Step 1 — Membuat Code Engine Project
-Kami juga sudah menyiapkan *wrapper* aplikasi dan menerapkannya di IBM Code Engine. Jika ingin mempelajari proses build & deploy, cek dokumentasi terkait.
+### Step 1 — Membuat **Code Engine Project**
+Aplikasi *wrapper* agent telah disiapkan dan dideploy di IBM Code Engine. Panduan build & deploy lengkap tersedia di dokumentasi.
 
-### Step 2 — Mendaftarkan Endpoint sebagai **External Agent** di Orchestrate
-1. Buka **AI agent configuration** dari hamburger menu kiri‑atas.
-   ![Hamburger](https://github.com/user-attachments/assets/7bf1bea5-89c1-4c43-94ce-01685da513d6)
+### Step 2 — Mendaftarkan Endpoint sebagai **External Agent**
+1. Di UI watsonx Orchestrate, buka **AI agent configuration** lewat hamburger menu kiri‑atas.
+   
+   ![Menu Config](https://github.com/user-attachments/assets/481bd69a-798f-4ef1-83a6-8d873f1553ae)
 2. Pilih **Agents** → klik **Add agent**.
+
+   ![Add Agent](https://github.com/user-attachments/assets/a16c93c0-c29e-427e-9c86-23b78163fad0)
 3. Isi form:
-   * **Display Name**: `[Inisial Nama] Supplier Research`
-   * **Description**: AI agent yang menggunakan Google Search & dokumen supplier untuk menjawab pertanyaan procurement.
+   * **Display Name**: `[Inisial Nama] Supplier Research`
+   * **Description**: AI agent yang memanfaatkan mesin pencari & dokumen supplier untuk menjawab pertanyaan procurement.
    * **API Key**: bebas (string apa saja)
    * **Service Instance URL**:  
      `https://bahasa-agent-supplier-research.1tzeky9wts20.us-south.codeengine.appdomain.cloud/chat/completions`
-   
-   ![URL](https://github.com/user-attachments/assets/6a853ea9-26a6-49f3-8e8b-303292c11060)
-4. **Menampilkan chain‑of‑thought** *(optional)*: setelah agent dibuat, klik namanya → aktifkan *Show thinking in chat*.
-   ![CoT](https://github.com/user-attachments/assets/bf9bb2a2-1f43-4e93-b0ae-72ae728c2d00)
 
-### Step 3 — Menguji Agent di **AI Chat**
-1. Pilih **Chat** di sidebar watsonx Orchestrate.
-2. Ketik pertanyaan dengan *mention* agent, misalnya:
+   ![Endpoint URL](https://github.com/user-attachments/assets/f951d43d-4141-46e3-936b-c284b987b8c2)
+4. *(Opsional)* Aktifkan **Show thinking in chat** (chain‑of‑thought) dengan membuka detail agent → geser saklar.
+
+   ![Chain‑of‑Thought](https://github.com/user-attachments/assets/2ea7e3ee-c976-496f-b57e-7d5c30433108)
+
+### Step 3 — Menguji Agent lewat **AI Chat**
+1. Pilih **Chat** di sidebar Orchestrate.
+2. Kirim pertanyaan dengan *mention* agent, contohnya:
    ```text
    @RA-supplier-research Pemasok mana yang lebih layak untuk membeli produk Xtralife antara Excelentia Supplies dan Global Office Supplies? Berikan daftar kelebihan dan kekurangan.
    ```
-   ![Chat 1](https://github.com/user-attachments/assets/852619b9-af4b-4703-b62c-1ea7337516a8)
+   
+   ![Chat 1](https://github.com/user-attachments/assets/4868c320-800f-419e-806c-fde8e9ca2e9c)
 3. Contoh lain:
    ```text
    @Supplier Research Supplier mana yang harus saya pilih? Saya butuh cepat dan urgent.
    ```
-   ![Chat 2](https://github.com/user-attachments/assets/06487675-d08c-4b83-a836-c3b0719d1393)
+   
+   ![Chat 2](https://github.com/user-attachments/assets/c2f2a7a0-2fcc-42ae-bcf7-f3ff14b01bc0)
 
 ---
 
 ### Referensi
-* Lab & kode backend asli: <https://github.com/rc-ibm/watsonx-orchestrate-developer-toolkit/tree/main/external_agent>
-* Artikel tentang agent di Orchestrate: <https://heidloff.net/article/watsonx-orchestrate-agent-agents/>
+* **Original Lab & Backend Code**: <https://github.com/rc-ibm/watsonx-orchestrate-developer-toolkit/tree/main/external_agent>
+* **Artikel tentang Agent Orchestrate**: <https://heidloff.net/article/watsonx-orchestrate-agent-agents/>
 
-![Ref](https://github.com/user-attachments/assets/a2531607-735c-4ae3-994c-4799dec156c7)
+![Referensi](https://github.com/user-attachments/assets/738b2df8-2530-490b-ab88-08247d3040bd)
 
 ---
 
 ## 🎯 Penutup
-Dengan menyelesaikan **Lab 2** ini, Anda sekarang mampu:
-1. Menyediakan AI agent sebagai layanan eksternal (endpoint `/chat/completions`).
-2. Mendaftarkan & mengonfigurasi agent di watsonx Orchestrate.
-3. Mendorong kolaborasi multi‑agent untuk alur kerja procurement yang kompleks.
+Dengan menyelesaikan **Lab 2** ini, Anda kini dapat:
+1. Menyediakan AI agent sebagai layanan eksternal (`/chat/completions`).
+2. Mendaftarkan dan mengonfigurasi agent di watsonx Orchestrate.
+3. Mengorkestrasi multi‑agent workflow untuk skenario procurement kompleks.
 
 Selamat bereksperimen! 🚀
