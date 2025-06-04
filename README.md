@@ -2,6 +2,8 @@
   <img src="https://github.com/user-attachments/assets/73d75627-a774-4a00-9338-cc8f471abb89" alt="Updated Image" width="400" height="224">
 </div>
 
+![image](https://github.com/user-attachments/assets/e0b98a69-3174-4ca1-96a7-b2a19f0ed5fa)
+
 ## 📖 Pendahuluan
 
 IBM watsonx Orchestrate menggunakan pemrosesan bahasa alami (NLP) dan Generative AI untuk mengambil keterampilan dasar dan lanjutan dari katalog, guna mengeksekusi permintaan dari pelanggan, karyawan, dan pekerja pengetahuan, serta melakukan tugas-tugas kompleks atas nama mereka.
