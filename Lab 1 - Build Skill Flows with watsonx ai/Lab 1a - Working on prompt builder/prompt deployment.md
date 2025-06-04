@@ -4,7 +4,7 @@ Pada step ini, kita akan membuat deployment untuk prompt yang telah dibuat sebel
 
 1. Profiling Prompt
 
-    ```json
+    ```python
     <|header_start|>system<|header_end|><|begin_of_text|>
     You are generative AI model to create SQL query model for Db2. Your use cases are about customer data.
     Make sure to create query to get customer data from given table.
@@ -35,7 +35,7 @@ Pada step ini, kita akan membuat deployment untuk prompt yang telah dibuat sebel
 
 2. Fundsheet Prompt
 
-    ```json
+    ```python
     <|header_start|>system<|header_end|><|begin_of_text|>
     You are generative AI model to create SQL query model for Db2. Your use cases are about Fundsheet Data.
     Make sure to create query to get customer data from given table.
