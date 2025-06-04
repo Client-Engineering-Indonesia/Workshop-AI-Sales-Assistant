@@ -59,77 +59,22 @@ Kembali ke **Project → Assets** dan lanjutkan ke tahapan berikutnya.
 
 ![Build AI Agent](https://github.com/user-attachments/assets/c6dde849-5455-45a8-a82d-9cd11b135933)
 
-### Step 9 — Beri Nama Agent
-
-![Name Agent](https://github.com/user-attachments/assets/4d67bd24-299c-420c-872f-a62d115c9e9c)
-
-### Step 10 — Tambahkan Tools untuk Agent
-- Klik **Add Tool** untuk melihat daftar tool.
-
-![Add Tool](https://github.com/user-attachments/assets/31d08bd7-606c-4d93-8eab-47ea54a56f55)
-
-### Step 11 — Hubungkan Vector Index
-- Toggle **Document Search** agar aktif.
-- Pada dropdown, pilih vector index yang telah dibuat.
-- Klik **Select**.
-
-![Connect Vector Index](https://github.com/user-attachments/assets/31f395dd-295a-4cc2-810f-e1c5be2ff17d)
-
-### Step 12 — Tambahkan *Additional Tools*
-- Tambahkan **Google Search** sebagai tool tambahan.
-- Panel tool kini menampilkan **Document Search** dan **Google Search**.
-
-![Additional Tools](https://github.com/user-attachments/assets/165e3604-aa31-4657-ac75-b20cea4d0c54)
-
-### Step 13 — Konfigurasi Model & Parameter Agent
-Sesuaikan **Foundation Model**, *system prompt*, dan parameter lain. Contoh prompt:
-
-```text
-Kamu adalah researcher untuk memilih supplier yang akan menggunakan tools untuk menjawab pertanyaan yang diberikan secara tepat berdasarkan riset pada Google dan Document Search.
-
-1. Google Search dapat digunakan untuk menentukan sentimen terhadap suppliers serta pertanyaan umum lain yang tidak terkait Document Search.
-   Contoh: “Review dan customer sentiment untuk Suppliers A untuk produk X” dan “Review dan customer sentiment untuk Suppliers B untuk produk X”.
-2. Document Search memiliki peraturan yang diberikan untuk menentukan suppliers dan laporan penjualan Global Office Supplies serta Excelentia Supplies.
-   Contoh: "supplier A vs supplier B for X product"
-```
-
-![Configure Prompt](https://github.com/user-attachments/assets/1a776d51-c2b4-4966-a22f-2dc17c08bb43)
-
-### Step 14 — Test Agent
-Coba pertanyaan berikut:
-
-- `Pemasok mana dari Excelentia Supplies dan Global Office Supplies yang layak untuk membeli produk Xtralife. Berikan daftar kelebihan dan kekurangan masing-masing pemasok.`
-- `Pemasok mana yang harus saya pilih? Saya ingin pengiriman yang cepat.`
-
-![Test Agent](https://github.com/user-attachments/assets/1271f6e9-199b-4619-a2bd-d150fe40ca49)
-
-### Step 15 — Lihat Respon Agent
-
-![Agent Response](https://github.com/user-attachments/assets/79472629-ab91-4eda-a54e-759e6a0b6061)
-
-### Step 16 — Simpan Agent
-
-![Save Agent](https://github.com/user-attachments/assets/0c12708d-c016-4372-b895-41e7df6a6fb9)
-
-### Step 17 — Export Agent
-- Simpan agent ke dalam notebook atau file yang bisa diedit untuk modifikasi selanjutnya.
-
-![Export Agent](https://github.com/user-attachments/assets/3facf470-e766-49b7-a694-85dd60d759a3)
-
----
-
-![Rocket](https://github.com/user-attachments/assets/d0099ed6-bf43-4e40-8883-fd1e11e83dc5)
+### Step 9 — Hapus tool yang 
 
 
 
-
-
+### Step 10 - Instruksi ke agent 
+Masukan text di **Agent instructions** sesuai dengan kebutuhan dan fungsi yang dibutuhkan
 
 ```text
 You are a helpful assistant that uses tools to answer questions concisely.
 Make sure only to answer questions based on provided data without adding additional informations. Make sure to pass the SQL query completely and always generate reasoning from all your answers based on provided data make the answer concise. 
 When greeted, say "Hi, I am watsonx.ai agent. How can I help you?"
 ```
+
+![Agent Instruction](https://github.com/user-attachments/assets/204a2c02-27f3-4c66-9880-13bc905c9b83)
+
+Kemudian, apabila ada instruction yang lebih spesifik bisa ditambahkan juga ke dalam **Common instructions**.
 
 ```text
 # Notes
@@ -149,13 +94,29 @@ You are an Agent with three functions or task:
 3. If the question will relate to both process. In example you need to find information from Reksadana but need information from Profilingtools. Then the process will be ProfilingTools go to Db2_tools pass the result from Db2_tools as cust_info and the question as question, then go to FundsheetQuery and go to db2_tool again and generate the answer
 ```
 
+![Agent Instruction](https://github.com/user-attachments/assets/062cc7ad-4510-4c08-91cc-9f2b0a94d64d)
 
 
-### Create custom tool "db2_tool"
+### Step 10 — Tambahkan Tools untuk Agent
+Di dalam Agent lab watsonx.ai, kita dapat menambahkan tools yang sudah tersedia atau bisa mengkostumisasi tools
 
-```text
-Use this tool, always after we get result from customer profiling and generate the final data, make sure to pass all query to this tool, including the one after '='
-```
+- Tools di **Add atool**
+  ![Add Tool](https://github.com/user-attachments/assets/31d08bd7-606c-4d93-8eab-47ea54a56f55)
+
+- Tools di **Create custom tool**
+  ![Add Tool](https://github.com/user-attachments/assets/74596736-0460-45b7-a394-f7323859826c)
+
+Pada step ini, kita hanya menggunakan custom tool dikarenakan data yang digunakan merupakan data structured yang harus dikoneksikan ke dalam db2. Ada 3 tools yang akan dibuat, **db2tool** sebagai koneksi ke db2; **Fundsheetquery** sebagai data knowledge terkait fund sheet manulife; serta **Customerprofiling** sebagai data knowledge terkait data dummy customer
+
+1. Tool **db2tool**
+   - Name: ```db2tool```
+   - Tool description:
+     ```text
+      Use this tool, always after we get result from customer profiling and generate the final data, make sure to pass all query to this tool, including the one after '='
+      ```
+   - dd
+
+
 
 ```python
 {
@@ -191,9 +152,25 @@ def db2_init(query):
     json_data = answer_df.to_json(orient='records')
     return json_data
 ```
+  <img width="1360" alt="image" src="https://github.com/user-attachments/assets/11c42436-9524-4ce2-abcf-76a3f723b103" />
+
+Fundsheetquery
+<img width="1360" alt="image" src="https://github.com/user-attachments/assets/f1209215-b9e4-4664-b494-f28351ed262f" />
+
+Customerprofiling
+<img width="1360" alt="image" src="https://github.com/user-attachments/assets/a31c89f0-f58e-4dc4-aa25-49d9122defad" />
+
+
+
+
+### Create custom tool "db2_tool"
+
+
 
 
 ### Create custom tools "FundsheetQuery"
+
+<img width="1725" alt="image" src="https://github.com/user-attachments/assets/c60ec324-a052-423e-bb1e-c1728b8d53f6" />
 
 ```text
 This is a tool that you should use to generate query SQL from table name FUNDSHEET. Call this tool every time you get question related to Reksadana or Manulife
@@ -281,6 +258,7 @@ Use this tool if the question related to Customer Information then send the resu
   "type": "string"
  }
 }
+```
 
 <apikey>
 ```python
@@ -331,4 +309,75 @@ def generate_final_answer(question):
     scoring_response = ast.literal_eval(scoring_response)['query']
     return scoring_response
 ```
+
+
+
+
+
+
+
+__________
+
+
+### Step 11 — Hubungkan Vector Index
+- Toggle **Document Search** agar aktif.
+- Pada dropdown, pilih vector index yang telah dibuat.
+- Klik **Select**.
+
+![Connect Vector Index](https://github.com/user-attachments/assets/31f395dd-295a-4cc2-810f-e1c5be2ff17d)
+
+### Step 12 — Tambahkan *Additional Tools*
+- Tambahkan **Google Search** sebagai tool tambahan.
+- Panel tool kini menampilkan **Document Search** dan **Google Search**.
+
+![Additional Tools](https://github.com/user-attachments/assets/165e3604-aa31-4657-ac75-b20cea4d0c54)
+
+### Step 13 — Konfigurasi Model & Parameter Agent
+Sesuaikan **Foundation Model**, *system prompt*, dan parameter lain. Contoh prompt:
+
+```text
+Kamu adalah researcher untuk memilih supplier yang akan menggunakan tools untuk menjawab pertanyaan yang diberikan secara tepat berdasarkan riset pada Google dan Document Search.
+
+1. Google Search dapat digunakan untuk menentukan sentimen terhadap suppliers serta pertanyaan umum lain yang tidak terkait Document Search.
+   Contoh: “Review dan customer sentiment untuk Suppliers A untuk produk X” dan “Review dan customer sentiment untuk Suppliers B untuk produk X”.
+2. Document Search memiliki peraturan yang diberikan untuk menentukan suppliers dan laporan penjualan Global Office Supplies serta Excelentia Supplies.
+   Contoh: "supplier A vs supplier B for X product"
+```
+
+![Configure Prompt](https://github.com/user-attachments/assets/1a776d51-c2b4-4966-a22f-2dc17c08bb43)
+
+### Step 14 — Test Agent
+Coba pertanyaan berikut:
+
+- `Pemasok mana dari Excelentia Supplies dan Global Office Supplies yang layak untuk membeli produk Xtralife. Berikan daftar kelebihan dan kekurangan masing-masing pemasok.`
+- `Pemasok mana yang harus saya pilih? Saya ingin pengiriman yang cepat.`
+
+![Test Agent](https://github.com/user-attachments/assets/1271f6e9-199b-4619-a2bd-d150fe40ca49)
+
+### Step 15 — Lihat Respon Agent
+
+![Agent Response](https://github.com/user-attachments/assets/79472629-ab91-4eda-a54e-759e6a0b6061)
+
+### Step 16 — Simpan Agent
+
+![Save Agent](https://github.com/user-attachments/assets/0c12708d-c016-4372-b895-41e7df6a6fb9)
+
+### Step 17 — Export Agent
+- Simpan agent ke dalam notebook atau file yang bisa diedit untuk modifikasi selanjutnya.
+
+![Export Agent](https://github.com/user-attachments/assets/3facf470-e766-49b7-a694-85dd60d759a3)
+
+---
+
+![Rocket](https://github.com/user-attachments/assets/d0099ed6-bf43-4e40-8883-fd1e11e83dc5)
+
+
+
+
+
+
+
+
+
+
 
