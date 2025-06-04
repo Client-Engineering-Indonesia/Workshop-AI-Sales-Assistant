@@ -119,3 +119,216 @@ Coba pertanyaan berikut:
 ---
 
 ![Rocket](https://github.com/user-attachments/assets/d0099ed6-bf43-4e40-8883-fd1e11e83dc5)
+
+
+
+
+
+
+```text
+You are a helpful assistant that uses tools to answer questions concisely.
+Make sure only to answer questions based on provided data without adding additional informations. Make sure to pass the SQL query completely and always generate reasoning from all your answers based on provided data make the answer concise. 
+When greeted, say "Hi, I am watsonx.ai agent. How can I help you?"
+```
+
+```text
+# Notes
+- Use markdown syntax for formatting code snippets, links, JSON, tables, images, files.
+- Any HTML tags must be wrapped in block quotes, for example ```<html>```.
+- When returning code blocks, specify language.
+- Sometimes, things don't go as planned. Tools may not provide useful information on the first few tries. You should always try a few different approaches before declaring the problem unsolvable.
+- When the tool doesn't give you what you were asking for, you must either use another tool or a different tool input.
+- When using search engines, you try different formulations of the query, possibly even in a different language.
+- You cannot do complex calculations, computations, or data manipulations without using tools.
+- If you need to call a tool to compute something, always call it instead of saying you will call it.
+
+## Main Notes
+You are an Agent with three functions or task:
+1. If the question only related to Customer Information then call ProfilingTools then Db2_tools and generate the final answer
+2. If the question only related to Reksadana or Manulife Information then call FundsheetQuery then Db2_tools and generate the final answer
+3. If the question will relate to both process. In example you need to find information from Reksadana but need information from Profilingtools. Then the process will be ProfilingTools go to Db2_tools pass the result from Db2_tools as cust_info and the question as question, then go to FundsheetQuery and go to db2_tool again and generate the answer
+```
+
+
+
+### Create custom tool "db2_tool"
+
+```text
+Use this tool, always after we get result from customer profiling and generate the final data, make sure to pass all query to this tool, including the one after '='
+```
+
+```python
+{
+ "query": {
+  "title": "query",
+  "description": "query generated from previous profiling tools that we need to pass to db2, make sure to pass all query to this tool",
+  "type": "string"
+ }
+}
+```
+
+<DB2_USERNAME>
+<DB2_PASSWORD>
+  
+```python
+def db2_init(query):
+    import ibm_db, ibm_db_dbi as dbi
+    import pandas as pd
+    DB2_HOST = '54a2f15b-5c0f-46df-8954-7e38e612c2bd.c1ogj3sd0tgtu0lqde00.databases.appdomain.cloud'
+    DB2_PORT = '32733'
+    DB2_USERNAME = 'xxx'
+    DB2_PASSWORD = 'xxx'
+    db2_dsn = 'DATABASE={};HOSTNAME={};PORT={};PROTOCOL=TCPIP;UID={uid};PWD={pwd};SECURITY=SSL'.format(
+        'BLUDB',
+        DB2_HOST,   
+        DB2_PORT,         
+        uid=DB2_USERNAME,     
+        pwd=DB2_PASSWORD     
+    )
+    print(db2_dsn)
+    db2_connection = dbi.connect(db2_dsn) 
+    answer_df = pd.read_sql_query(query, con=db2_connection)
+    json_data = answer_df.to_json(orient='records')
+    return json_data
+```
+
+
+### Create custom tools "FundsheetQuery"
+
+```text
+This is a tool that you should use to generate query SQL from table name FUNDSHEET. Call this tool every time you get question related to Reksadana or Manulife
+```
+
+```python
+{
+ "question": {
+  "title": "question",
+  "description": "question asked by the user that you must use as the input for the tool",
+  "type": "string"
+ },
+ "cust_info": {
+  "title": "customer information to check",
+  "description": "by default, always set the value as 'null' but if somehow you get value from previous step, then set it up",
+  "type": "string"
+ }
+}
+```
+
+<apikey>
+  
+```python
+def generate_final_answer(question, cust_info):
+    import requests
+    import ast 
+    token_url = "https://iam.cloud.ibm.com/identity/token"
+
+    # Headers
+    headers = {
+        'Content-Type': 'application/x-www-form-urlencoded',
+        'Accept': 'application/json'
+    }
+
+    # Data (form-encoded)
+    data = {
+        'grant_type': 'urn:ibm:params:oauth:grant-type:apikey',
+        'apikey': "xxx"
+    }
+
+    # Make the POST request to get the token
+    response = requests.post(token_url, headers=headers, data=data, verify=False)  # verify=False for --insecure
+    iam_token = response.json().get('access_token')
+    
+    # Step 2: Use the token in the scoring request
+    scoring_url = "https://us-south.ml.cloud.ibm.com/ml/v1/deployments/70bc7bb4-3003-48aa-893d-2a0b2724f059/text/generation?version=2021-05-01"  # Replace with your actual scoring endpoint
+
+    # Headers for the scoring request
+    scoring_headers = {
+        'Content-Type': 'application/json',
+        'Accept': 'application/json',
+        'Authorization': f'Bearer {iam_token}'  # Use the token here
+    }
+
+    # Define the data to be scored
+    scoring_data = {
+        "parameters": {
+            "prompt_variables": {
+                "question":f"'{question}'",
+                "cust_info":f"'{cust_info}'"# Replace with actual passage
+            }
+        }
+    }
+
+    # Make the scoring request
+    scoring_response = requests.post(scoring_url, headers=scoring_headers, json=scoring_data)
+    print(scoring_response)
+    scoring_response = scoring_response.json()['results'][0]['generated_text']
+    scoring_response = ast.literal_eval(scoring_response)['query']
+    return scoring_response
+```
+
+
+### Create custom tools "CustomerProfilling"
+
+```text
+Use this tool if the question related to Customer Information then send the result to db2_tool make it as a query.
+```
+
+```python
+{
+ "question": {
+  "title": "question",
+  "description": "question asked by the user that you must use as the input for the tool",
+  "type": "string"
+ }
+}
+
+<apikey>
+```python
+def generate_final_answer(question):
+    import requests
+    import ast 
+    token_url = "https://iam.cloud.ibm.com/identity/token"
+
+    # Headers
+    headers = {
+        'Content-Type': 'application/x-www-form-urlencoded',
+        'Accept': 'application/json'
+    }
+
+    # Data (form-encoded)
+    data = {
+        'grant_type': 'urn:ibm:params:oauth:grant-type:apikey',
+        'apikey': "xxx"
+    }
+
+    # Make the POST request to get the token
+    response = requests.post(token_url, headers=headers, data=data, verify=False)  # verify=False for --insecure
+    iam_token = response.json().get('access_token')
+    
+    # Step 2: Use the token in the scoring request
+    scoring_url = "https://us-south.ml.cloud.ibm.com/ml/v1/deployments/4575323a-bcf0-4af5-9fa6-f1c868f5d2f3/text/generation?version=2021-05-01"  # Replace with your actual scoring endpoint
+
+    # Headers for the scoring request
+    scoring_headers = {
+        'Content-Type': 'application/json',
+        'Accept': 'application/json',
+        'Authorization': f'Bearer {iam_token}'  # Use the token here
+    }
+
+    # Define the data to be scored
+    scoring_data = {
+        "parameters": {
+            "prompt_variables": {
+                "question":f"'{question}'"  # Replace with actual passage
+            }
+        }
+    }
+
+    # Make the scoring request
+    scoring_response = requests.post(scoring_url, headers=scoring_headers, json=scoring_data)
+    print(scoring_response)
+    scoring_response = scoring_response.json()['results'][0]['generated_text']
+    scoring_response = ast.literal_eval(scoring_response)['query']
+    return scoring_response
+```
+
