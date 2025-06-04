@@ -1,8 +1,13 @@
 # Membuat deployment berdasarkan prompt yang telah dibuat
 
-Pada step ini, kita akan membuat deployment untuk prompt yang telah dibuat sebelumnya. Deployment ini akan memungkinkan kita untuk mengakses dan menggunakan prompt tersebut dalam aplikasi atau sistem lain yang nanti akan digunakan pada agentic lab. Ada 2 deployment yang akan kita buat, yaitu:
+Pada step ini, kita akan membuat deployment untuk prompt yang telah dibuat sebelumnya. Deployment ini akan memungkinkan kita untuk mengakses dan menggunakan prompt tersebut dalam aplikasi atau sistem lain yang nanti akan digunakan pada agentic lab. Ada 2 deployment yang akan kita buat, yaitu **Profiling Prompt** dan **Fundsheet Prompt**.
 
-1. Profiling Prompt
+Pada tampilan freefrom, kita dapat buat prompt sekreasi kita untuk menuliskan suatu instruksi yang diingin. Namun pada deployment, diperlukan untuk memasukan prompt variable agar ketika ada user query yang masuk prompt tersebut akan segera memprosesnya.
+![Add Tool](https://github.com/user-attachments/assets/9069847d-8fde-4e1d-ac8d-0f8940caaa38)
+
+
+### Step 1. Profiling Prompt
+    Salin dan tempel contoh prompt sebagai berikut
 
     ```python
     <|header_start|>system<|header_end|><|begin_of_text|>
@@ -32,9 +37,18 @@ Pada step ini, kita akan membuat deployment untuk prompt yang telah dibuat sebel
     <|end_of_text|>
     <|header_start|>assistant<|header_end|> 
     ```
+    - Konfigurasikan prompt variable
+    ![Add Tool](https://github.com/user-attachments/assets/21b205d5-7cce-47c5-9366-f8523529d77f)
 
-2. Fundsheet Prompt
+    - Konfigurasikan model parameter
+    <img width="1723" alt="image" src="https://github.com/user-attachments/assets/dc02737c-d9ff-4e89-9173-96fac4408f8c" />
+    ![Add Tool](https://github.com/user-attachments/assets/dc02737c-d9ff-4e89-9173-96fac4408f8c)
 
+---
+
+### Step 2. Fundsheet Prompt
+    Salin dan tempel contoh prompt sebagai berikut
+   
     ```python
     <|header_start|>system<|header_end|><|begin_of_text|>
     You are generative AI model to create SQL query model for Db2. Your use cases are about Fundsheet Data.
@@ -84,4 +98,22 @@ Pada step ini, kita akan membuat deployment untuk prompt yang telah dibuat sebel
     <|header_start|>assistant<|header_end|> 
     ```
 
-    ![Add Tool](https://github.com/user-attachments/assets/11c42436-9524-4ce2-abcf-76a3f723b103)
+    - Konfigurasikan prompt variable
+    ![Add Tool](https://github.com/user-attachments/assets/a45e8acd-7d83-467a-9594-2a4ed8acd918)
+
+    - Konfigurasikan model parameter
+    ![Add Tool](https://github.com/user-attachments/assets/4a5f6446-c02c-4ed5-a798-3e6476a74905)
+
+
+---
+
+### Step 3. Promote space ke deployment
+    Setelah prompt template sudah dibuat, selanutnya promote ke deployment 
+
+    ![Add Tool](https://github.com/user-attachments/assets/1253486e-f9ed-41c9-990d-699ce4c92fbc)
+
+    Pilihlah doployment space yang sudah dibuat dan klik promote
+    ![Add Tool](https://github.com/user-attachments/assets/100b1152-7e78-4f18-a4a8-989dab0b85d6)
+
+
+
