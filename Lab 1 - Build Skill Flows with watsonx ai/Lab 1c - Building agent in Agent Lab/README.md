@@ -326,35 +326,32 @@ Selanjutnya kita bisa untuk mengkonfigurasikan model dan parameter
 
 ### Step 12 — Test Agent
 Coba pertanyaan berikut:
-- ** Manulife Fundsheet**:
+- **Manulife Fundsheet**
   - Sebutkan 5 rekomendasi reksadana dengan Klasifikasi risiko tinggi?
   - Apa saja reksadana paling aman yang bisa ditawarkan?
   - Bandingkan Manulife dana pasar uang dengan schroder dana ekuitas premier?
-  - Apa reksadana yang memiliki high return paling tinggi?
-  - Reksadana apa yang mengalami kerugian paling tinggi?
 
-- **Customer Profile**:
+- **Customer Profile**
   - Siapa saja pelanggan yang total pengeluaran bulan lalu di atas 3 juta rupiah
   - Berapa banyak segmentasi customer yang masuk ke dalam kategori Young Professional?
   - Berapa persentase pelanggan yang statusnya Single, Married, dan Divorced?
 
-- **Customer and Fundsheet**:
-  - Dana ekuitas Manulife mana yang cocok untuk klien High Net Worth yang nyaman dengan volatilitas?
-  - Gaji saya sekitar tiga juta rupiah per bulan, posisi masih single dan saya cukup boros. Produk Manulife apa yang pas supaya saya bisa mulai investasi tapi tetap aman?
-  - Pendapatan saya sekitar tiga setengah juta per bulan, kadang naik-turun karena kerja lepas. Saya butuh produk Manulife yang bisa bantu kumpulin dana kuliah S2 lima tahun lagi, tapi jangan terlalu berisiko tinggi. Apa rekomendasinya?
-  - Orang tua saya habis haji, mau investasi syariah risiko sedang. Ada opsi obligasi syariah di Manulife?
-  - Nasabah ekspatriat bergaji USD di Timur Tengah ingin lindung nilai rupiah. Fund apa?
+- **Customer and Fundsheet**
   - Tolong tampilkan profil lengkap nasabah Iron Man – umur, status, segmen, rata-rata pengeluaran, dan saran produk Manulife yang paling pas
-
-![Test Agent](https://github.com/user-attachments/assets/1271f6e9-199b-4619-a2bd-d150fe40ca49)
+  - Pendapatan saya sekitar tiga setengah juta per bulan, kadang naik-turun karena kerja lepas. Saya butuh produk Manulife yang bisa bantu kumpulin dana kuliah S2 lima tahun lagi, tapi jangan terlalu berisiko tinggi. Apa rekomendasinya?
+  - Produk manulife apa yang cocok untuk customer bernama Yoda?
+  - Orang tua saya habis haji, mau investasi syariah risiko sedang. Ada opsi obligasi syariah di Manulife?
 
 ### Step 13 — Lihat Respon Agent
 
-![Agent Response](https://github.com/user-attachments/assets/79472629-ab91-4eda-a54e-759e6a0b6061)
+![Agent Response](https://github.com/user-attachments/assets/6bfe30de-2a57-4415-a3fc-fdba04a3adcb)
 
 ### Step 14 — Simpan Agent
 
 ![Save Agent](https://github.com/user-attachments/assets/0c12708d-c016-4372-b895-41e7df6a6fb9)
+
+<img width="1229" alt="image" src="https://github.com/user-attachments/assets/6bfe30de-2a57-4415-a3fc-fdba04a3adcb" />
+
 
 ### Step 15 — Export Agent
 - Simpan agent ke dalam notebook atau file yang bisa diedit untuk modifikasi selanjutnya.
