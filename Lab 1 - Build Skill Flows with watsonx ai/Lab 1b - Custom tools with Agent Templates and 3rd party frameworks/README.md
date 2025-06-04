@@ -70,9 +70,3 @@ Pada lab ini, kita akan membuat **Sales Analyzer Agent** dengan memanfaatkan *w
 2. Beberapa kueri uji sudah disediakan sebagai komentar—hapus `#` dan jalankan untuk menguji hasil.
 
 ![Run Notebook](https://github.com/user-attachments/assets/7a5fedd0-7f73-40db-a5eb-4cfdcb92bdce)
-
----
-
-## 🎉 Selesai!
-Selamat! Anda telah berhasil membuat **Sales Analyzer Agent** berbasis **watsonx.ai** dan **Crew AI**.  
-Happy Coding! 🚀🎯
