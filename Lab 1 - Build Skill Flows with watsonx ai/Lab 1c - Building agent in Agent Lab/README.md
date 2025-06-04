@@ -110,11 +110,45 @@ Pada step ini, kita hanya menggunakan custom tool dikarenakan data yang digunaka
 
 1. Tool **db2tool**
    - Name: ```db2tool```
+     
    - Tool description:
      ```text
       Use this tool, always after we get result from customer profiling and generate the final data, make sure to pass all query to this tool, including the one after '='
-      ```
-   - dd
+     ```
+     
+   - Input JSON Schema:
+     ```python
+      {
+       "query": {
+        "title": "query",
+        "description": "query generated from previous profiling tools that we need to pass to db2, make sure to pass all query to this tool",
+        "type": "string"
+       }
+      }
+     ```
+     
+   - Python code:
+     ```python
+      def db2_init(query):
+          import ibm_db, ibm_db_dbi as dbi
+          import pandas as pd
+          DB2_HOST = '54a2f15b-5c0f-46df-8954-7e38e612c2bd.c1ogj3sd0tgtu0lqde00.databases.appdomain.cloud'
+          DB2_PORT = '32733'
+          DB2_USERNAME = 'xxx'
+          DB2_PASSWORD = 'xxx'
+          db2_dsn = 'DATABASE={};HOSTNAME={};PORT={};PROTOCOL=TCPIP;UID={uid};PWD={pwd};SECURITY=SSL'.format(
+              'BLUDB',
+              DB2_HOST,   
+              DB2_PORT,         
+              uid=DB2_USERNAME,     
+              pwd=DB2_PASSWORD     
+          )
+          print(db2_dsn)
+          db2_connection = dbi.connect(db2_dsn) 
+          answer_df = pd.read_sql_query(query, con=db2_connection)
+          json_data = answer_df.to_json(orient='records')
+          return json_data
+     ```
 
 
 
