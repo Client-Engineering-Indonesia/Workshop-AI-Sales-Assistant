@@ -2,12 +2,9 @@
   <img src="https://github.com/user-attachments/assets/e0b98a69-3174-4ca1-96a7-b2a19f0ed5fa" alt="Updated Image" width="256" height="43.9">
 </div>
 
-![Add Tool](https://github.com/user-attachments/assets/e0b98a69-3174-4ca1-96a7-b2a19f0ed5fa)
-
-
 ## 📖 Pendahuluan
 
-IBM watsonx Orchestrate menggunakan pemrosesan bahasa alami (NLP) dan Generative AI untuk mengambil keterampilan dasar dan lanjutan dari katalog, guna mengeksekusi permintaan dari pelanggan, karyawan, dan pekerja pengetahuan, serta melakukan tugas-tugas kompleks atas nama mereka.
+IBM watsonx as Agentic AI memanfaatkan pemrosesan bahasa alami (NLP) dan Generative AI untuk mengorkestrasi keterampilan dasar maupun lanjutan dari katalog guna mengeksekusi permintaan dari pelanggan, karyawan, dan pekerja pengetahuan—serta menyelesaikan tugas-tugas kompleks atas nama mereka.
 
 ## 🎯 Workshop Digital Labour
 
@@ -21,26 +18,12 @@ Setelah mengikuti workshop ini, Anda akan dapat:
 - Merancang alur otomatisasi keputusan yang kompleks
 
 <div align="center">
-  <img src="https://github.com/user-attachments/assets/063ac639-f142-464e-98b9-c2b76b0ffc3e" alt="Updated Image" style="width:504px; height:323.2px;">
+  <img src="https://github.com/user-attachments/assets/50b4dcb3-d632-4f8b-b90d-86e2dfabc376" alt="Updated Image" width="788" height="363">
 </div>
 
 ### ⚡️ Disclaimer
 
 Mohon dicatat bahwa agenda yang disebutkan di atas hanya sebagai referensi dan mungkin tidak mencerminkan waktu atau durasi workshop yang sebenarnya.
 Waktu dan durasi workshop dapat berubah sewaktu-waktu.
-
-## 🛠️ Tentang Lab
-
-- Lab ini akan memandu Anda dalam membangun alur otomatisasi procurement, semuanya melalui watsonx Orchestrate. Disarankan untuk memulai dari **Lab 0**. Setiap lab dibangun di atas lab sebelumnya dan akan meningkatkan fungsi dan kompleksitas.
-- Semua panduan tersedia dalam folder **"workshop content"**. Panduan tersebut menjelaskan langkah demi langkah proses membangun skills, skill flows, dan otomatisasi.
-- Jika ada skill atau skill flow yang membutuhkan koneksi, detail koneksi tersedia di file **"Skill Connection Details"** atau akan diberikan selama workshop.
-
-<div align="center">
-  <img src="https://github.com/user-attachments/assets/16113687-a58d-4769-b2e7-1a3f55b816b5d" alt="Updated Image" width="937" height="480">
-</div>
-
-
-
-Silahkan untuk mengikuti dan mempersiapkan environment terlebih dahulu sebelum memulai workshopnya [environment check](https://github.com/Client-Engineering-Indonesia/Incubation-Agentic-AI-2025/tree/main/Lab%200%20-%20Environment%20Check)
 
 ---
