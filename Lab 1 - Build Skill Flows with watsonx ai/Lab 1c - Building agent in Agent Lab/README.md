@@ -15,55 +15,12 @@ Pada lab ini, Anda akan membuat *Supplier Researcher Agent* menggunakan **watson
 
 ![Associate Service](https://github.com/user-attachments/assets/ea9b3a8e-558a-458a-90db-c43e7bf4bb88)
 
-### Step 3 — Tambahkan *New Asset*
-- Pergi ke tab **Assets** dan klik **New Asset**.
-
-![New Asset](https://github.com/user-attachments/assets/1c610009-1f58-4e47-8b79-1fe936c38e47)
-
-### Step 4 — Buat *In‑memory vector store*
-- Pilih **Ground Gen AI with Vectorized Documents** dan klik untuk membuat *In‑Memory Vector Store*.
-
-![Vector Store](https://github.com/user-attachments/assets/ada8a269-9da9-4f6e-be74-326c2ddaabb8)
-
-### Step 5 — Pilih *Vector Index Type*
-- Klik **Ground Gen AI with Vectorized Documents**.
-- Akan muncul tiga opsi untuk membuat *vector index*:
-  1. In‑Memory
-  2. watsonx.data (Milvus)
-  3. Elasticsearch (ES)
-- Untuk lab ini, pilih **In‑Memory**.
-
-![Vector Index Type](https://github.com/user-attachments/assets/70e5b651-211b-4a2f-97b6-321a690efd6c)
-
-### Step 6 — Upload Dokumen & Konfigurasi Indeks
-- Upload dokumen ke vector index:
-  - `Procurement Requisition Rules.docx`
-  - `Supplier Sales Report for Procurement.docx`
-- Berikan nama untuk vector index.
-- Klik **Advanced Settings** untuk mengatur:
-  - **Embeddings Model** → pilih `all-MiniLM-L6-v2` (default: `granite-embeddings-107m-multilingual`).
-  - **Indexing Parameters** seperti *Text Chunk Size* dan *Text Chunk Overlap*.
-- Klik **Create**.
-
-![Upload & Configure](https://github.com/user-attachments/assets/0833c63e-a079-4126-92ab-f2b5451d3415)
-
-### Step 7 — View Vector Index Details
-- Setelah index dibuat, tampilannya akan terlihat seperti berikut.
-
-![Vector Index Details](https://github.com/user-attachments/assets/69afa420-8899-428f-8377-9d6bb676ec82)
-
-Kembali ke **Project → Assets** dan lanjutkan ke tahapan berikutnya.
-
-### Step 8 — Buat AI Agent
+### Step 3 — Buat AI Agent
 - Klik **New Asset** di sisi kiri dan pilih **Build an AI Agent to Automate Tasks**.
 
 ![Build AI Agent](https://github.com/user-attachments/assets/c6dde849-5455-45a8-a82d-9cd11b135933)
 
-### Step 9 — Hapus tool yang 
-
-
-
-### Step 10 - Instruksi ke agent 
+### Step 4 - Instruksi ke agent 
 Masukan text di **Agent instructions** sesuai dengan kebutuhan dan fungsi yang dibutuhkan
 
 ```text
@@ -97,7 +54,7 @@ You are an Agent with three functions or task:
 ![Agent Instruction](https://github.com/user-attachments/assets/062cc7ad-4510-4c08-91cc-9f2b0a94d64d)
 
 
-### Step 10 — Tambahkan Tools untuk Agent
+### Step 5 — Tambahkan Tools untuk Agent
 Di dalam Agent lab watsonx.ai, kita dapat menambahkan tools yang sudah tersedia atau bisa mengkostumisasi tools
 
 - Tools di **Add atool**
@@ -313,7 +270,7 @@ Pada step ini, kita hanya menggunakan custom tool dikarenakan data yang digunaka
   ![Add Tool](https://github.com/user-attachments/assets/a31c89f0-f58e-4dc4-aa25-49d9122defad)
 
 
-### Step 11 — Konfigurasi Model & Parameter Agent
+### Step 6 — Konfigurasi Model & Parameter Agent
 Selanjutnya kita bisa untuk mengkonfigurasikan model dan parameter
 ![Add Tool](https://github.com/user-attachments/assets/3f3f10d8-d993-4694-a12c-e30b54d5b1d7)
 
@@ -324,7 +281,7 @@ Selanjutnya kita bisa untuk mengkonfigurasikan model dan parameter
   ![Add Tool](https://github.com/user-attachments/assets/3f3f10d8-d993-4694-a12c-e30b54d5b1d7)
   <img width="1237" alt="image" src="https://github.com/user-attachments/assets/6e4875be-2be3-410f-bac9-bf31c8268673" />
 
-### Step 12 — Test Agent
+### Step 7 — Test Agent
 Coba pertanyaan berikut:
 - **Manulife Fundsheet**
   - Sebutkan 5 rekomendasi reksadana dengan Klasifikasi risiko tinggi?
@@ -342,15 +299,15 @@ Coba pertanyaan berikut:
   - Produk manulife apa yang cocok untuk customer bernama Yoda?
   - Orang tua saya habis haji, mau investasi syariah risiko sedang. Ada opsi obligasi syariah di Manulife?
 
-### Step 13 — Lihat Respon Agent
+### Step 8 — Lihat Respon Agent
 
 ![Agent Response](https://github.com/user-attachments/assets/6bfe30de-2a57-4415-a3fc-fdba04a3adcb)
 
-### Step 14 — Simpan Agent
+### Step 9 — Simpan Agent
 
 ![Save Agent](https://github.com/user-attachments/assets/3c0363a7-cfdf-481a-b365-9ccc0fb1686e)
 
-### Step 15 — Export Agent
+### Step 10 — Export Agent
 - Simpan agent ke dalam notebook atau file yang bisa diedit untuk modifikasi selanjutnya.
 
 ![Export Agent](https://github.com/user-attachments/assets/3b1d61d0-7285-4621-88cf-8144cee6f598)
