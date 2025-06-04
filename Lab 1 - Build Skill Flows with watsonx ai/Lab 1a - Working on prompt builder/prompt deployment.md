@@ -38,11 +38,11 @@ Pada tampilan freefrom, kita dapat buat prompt sekreasi kita untuk menuliskan su
     <|header_start|>assistant<|header_end|> 
     ```
     - Konfigurasikan prompt variable
-    ![Add Tool](https://github.com/user-attachments/assets/21b205d5-7cce-47c5-9366-f8523529d77f)
+![Add Tool](https://github.com/user-attachments/assets/21b205d5-7cce-47c5-9366-f8523529d77f)
 
     - Konfigurasikan model parameter
     <img width="1723" alt="image" src="https://github.com/user-attachments/assets/dc02737c-d9ff-4e89-9173-96fac4408f8c" />
-    ![Add Tool](https://github.com/user-attachments/assets/dc02737c-d9ff-4e89-9173-96fac4408f8c)
+![Add Tool](https://github.com/user-attachments/assets/dc02737c-d9ff-4e89-9173-96fac4408f8c)
 
 ---
 
@@ -108,12 +108,9 @@ Pada tampilan freefrom, kita dapat buat prompt sekreasi kita untuk menuliskan su
 ---
 
 ### Step 3. Promote space ke deployment
-    Setelah prompt template sudah dibuat, selanutnya promote ke deployment 
+    Setelah prompt template sudah dibuat, selanjutnya promote ke deployment 
 
-    ![Add Tool](https://github.com/user-attachments/assets/1253486e-f9ed-41c9-990d-699ce4c92fbc)
+![Add Tool](https://github.com/user-attachments/assets/1253486e-f9ed-41c9-990d-699ce4c92fbc)
 
     Pilihlah doployment space yang sudah dibuat dan klik promote
-    ![Add Tool](https://github.com/user-attachments/assets/100b1152-7e78-4f18-a4a8-989dab0b85d6)
-
-
-
+![Add Tool](https://github.com/user-attachments/assets/100b1152-7e78-4f18-a4a8-989dab0b85d6)
