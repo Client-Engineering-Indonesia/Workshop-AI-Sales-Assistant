@@ -35,20 +35,19 @@ Pada lab ini, kita akan membuat **Sales Analyzer Agent** dengan memanfaatkan *w
 1. Pilih **Work with data and models in Python or R notebooks**.
 2. Tekan **Create a notebook**.
 
-![Create Notebook](https://github.com/user-attachments/assets/a921bad3-bfa5-4f4a-8b92-785f1a1c859a)
+![Create Notebook](https://github.com/user-attachments/assets/2c45d6e5-167b-4189-afd0-f69e6a2ca284)
 
 ---
 
 ### Step 5 — Meng‑*upload* Notebook
 1. Klik **Local File**.
 2. Unggah file:  
-   • `SalesAnalysis.ipynb`  
-   • `SalesAnalysis_query.ipynb`
+   • `salesFund_crewai.ipynb`  
 3. Klik **Create** untuk menyelesaikan.
 
-![Upload Notebook](https://github.com/user-attachments/assets/99702f15-60bb-451e-9553-02ce43629a34)
+![Upload Notebook](https://github.com/user-attachments/assets/6c517d66-8bb0-441b-9b5e-94c44c601aed)
 
-![Notebook List](https://github.com/user-attachments/assets/1fd1dd77-c63d-4e54-9199-f60c115f8ef7)
+![Upload Notebook](https://github.com/user-attachments/assets/55564b87-dc55-4b54-a255-31ae39892c2e)
 
 ---
 
@@ -58,7 +57,7 @@ Pada lab ini, kita akan membuat **Sales Analyzer Agent** dengan memanfaatkan *w
 3. Pastikan `api_base` sesuai dengan instans watsonx Anda.
 4. `DB_Password` tersedia di *DB Connection Details.boxnote*.
 
-![API Key](https://github.com/user-attachments/assets/bc611d4d-18ea-4d1f-bf0b-5997581d987e)
+![API Key](https://github.com/user-attachments/assets/44e0ec77-0eb2-4822-8d5e-38e67706f9ae)
 
 > Anda juga dapat membuat API key melalui beranda IBM Cloud dan menyimpannya di mesin lokal.
 
