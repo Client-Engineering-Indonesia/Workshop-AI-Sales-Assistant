@@ -18,7 +18,7 @@ Setelah mengikuti workshop ini, Anda akan dapat:
 - Merancang alur otomatisasi keputusan yang kompleks
 
 <div align="center">
-  <img src="https://github.com/user-attachments/assets/50b4dcb3-d632-4f8b-b90d-86e2dfabc376" alt="Updated Image" width="788" height="363">
+  <img src="https://github.com/user-attachments/assets/50b4dcb3-d632-4f8b-b90d-86e2dfabc376" alt="Updated Image" width="630" height="290">
 </div>
 
 ### ⚡️ Disclaimer
