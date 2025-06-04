@@ -5,38 +5,11 @@
 watsonx.ai memudahkan kita untuk berinteraksi dengan model LLM dengan menyediakan layanan LLM-as-a-service.
 Di watsonx.ai, kita dapat menggunakan Prompt Lab dan Python SDK. Dengan menggunakan Prompt Lab atau Prompt Builder, Anda dapat memberikan instruksi kepada model LLM yang tersedia melalui antarmuka web. Sementara itu, jika Anda lebih tertarik mengakses model LLM menggunakan bahasa pemrograman, Anda dapat menggunakan contoh SDK.
 
-untuk selanjutnya: [Prompt engineering basic](https://github.com/Client-Engineering-Indonesia/Workshop-AI-Sales-Assistant/blob/main/Lab%201%20-%20Build%20Skill%20Flows%20with%20watsonx%20ai/Lab%201a%20-%20Working%20on%20prompt%20builder/prompt%20engineering.md)
-
 ---
 
-Di dalam chat prompt lab bisa langsung tanya-tanya mengenai dokumen yang ingin kita gunakan dengan model yang tersedia mana yang terbaik.
+Dalam watsonx.ai, Prompt Lab menyediakan tiga mode: **Chat** untuk interaksi seperti percakapan, **Structured** untuk membuat prompt dengan format terkontrol (instruction, input, output), dan **Freeform** untuk eksplorasi bebas tanpa batasan format. Ketiganya dirancang agar pengguna bisa menyesuaikan gaya pembuatan prompt sesuai kebutuhan teknis dan kreativitas.
 
-1. Clik new asset dan ketik prompt. Klok `Chat and build prompts with foundation models` 
-   <img width="1000" alt="image" src="https://github.com/user-attachments/assets/43b8182e-133b-43e7-9ebd-e7b411bdd5cc" />
-
-2. Pada tampilan berikut, Anda dapat memilih Chat, Structured, atau Freeform.
-   Untuk saat ini kita akan mencoba pada tab chat. Mohon untuk klik upload files.
-   <img width="1000" alt="image" src="https://github.com/user-attachments/assets/1dc0c5e9-5842-470e-bd6f-e34786996b66" />
-
-3. Upload dokumen yang ingin Anda inginkan, pada kasus ini akan upload dari folder data/fundsheet/ dengan file MDPU. Lalu, pilih lah embedding model yang ingin digunakan dan setting chunking yang diinginkan
- 
-   <img width="1000" alt="image" src="https://github.com/user-attachments/assets/226c8658-583d-45e4-a805-da39667606c3" />
-
-
-5. Setelah di create, Anda dapat bermain dengan model yang sudah tersedia atau model parameters sebagai berikut
-   <img width="1000" alt="image" src="https://github.com/user-attachments/assets/c5ae448e-f7df-4963-ae19-aeaed344247f" />
-
-7. Pada laman model, Anda dapat memilih model yang sesuai dengan kasus ini
-   <img width="1000" alt="image" src="https://github.com/user-attachments/assets/0d33ab0a-8441-46c9-895d-39be7f0fc481" />
-
-9. Setelah semua sudah ter-set, Anda bisa untuk mulai melakukan tanya jawab pada chat prompt tersebut
-  <img width="1000" alt="image" src="https://github.com/user-attachments/assets/4ec4cfde-9e72-49e9-9c2d-f84627a245d4" />
-
-11. Dalam proses data, kita dapat "collect and process customer data" to be clean. Sebagai contoh kita mempunyai data pdf yang ingin kita jadikan menjadi suatu data dalam bentuk json agar lebih terstruktur
-    <img width="1000" alt="image" src="https://github.com/user-attachments/assets/731cade9-a993-485f-a770-44e4bff7e3d5" />
-
-
-Watsonx.ai menyediakan fitur **Chat Prompt Lab** yang memungkinkan Anda untuk berinteraksi langsung dengan model AI menggunakan dokumen yang diunggah. Fitur ini sangat bermanfaat untuk analisis, tanya-jawab berbasis dokumen, dan ekstraksi informasi. 
+Pada worksho ini, kita akan menggunakan fitur **Chat Prompt Lab** yang memungkinkan Anda untuk berinteraksi langsung dengan model AI menggunakan dokumen yang diunggah. Fitur ini sangat bermanfaat untuk analisis, tanya-jawab berbasis dokumen, dan ekstraksi informasi. 
 
 ### Step 1: Buat Prompt Baru
 - Klik **New Asset**
