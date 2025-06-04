@@ -348,23 +348,15 @@ Coba pertanyaan berikut:
 
 ### Step 14 — Simpan Agent
 
-![Save Agent](https://github.com/user-attachments/assets/0c12708d-c016-4372-b895-41e7df6a6fb9)
-
-<img width="1229" alt="image" src="https://github.com/user-attachments/assets/6bfe30de-2a57-4415-a3fc-fdba04a3adcb" />
-
+![Save Agent](https://github.com/user-attachments/assets/3c0363a7-cfdf-481a-b365-9ccc0fb1686e)
 
 ### Step 15 — Export Agent
 - Simpan agent ke dalam notebook atau file yang bisa diedit untuk modifikasi selanjutnya.
 
-![Export Agent](https://github.com/user-attachments/assets/3facf470-e766-49b7-a694-85dd60d759a3)
+![Export Agent](https://github.com/user-attachments/assets/3b1d61d0-7285-4621-88cf-8144cee6f598)
+![Export Agent](https://github.com/user-attachments/assets/9f92307a-8808-449d-8bcd-3fe73d43258e)
 
 ---
-
-![Rocket](https://github.com/user-attachments/assets/d0099ed6-bf43-4e40-8883-fd1e11e83dc5)
-
-
-
-
 
 
 
