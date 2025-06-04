@@ -1,6 +1,0 @@
-fastapi 
-ibm-watson-machine-learning
-dotenv
-requests
-uvicorn
-Salesforce
