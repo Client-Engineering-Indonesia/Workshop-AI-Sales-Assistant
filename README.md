@@ -2,7 +2,8 @@
   <img src="https://github.com/user-attachments/assets/e0b98a69-3174-4ca1-96a7-b2a19f0ed5fa" alt="Updated Image" width="400" height="224">
 </div>
 
-![image](https://github.com/user-attachments/assets/e0b98a69-3174-4ca1-96a7-b2a19f0ed5fa)
+![Add Tool](https://github.com/user-attachments/assets/e0b98a69-3174-4ca1-96a7-b2a19f0ed5fa)
+
 
 ## 📖 Pendahuluan
 
