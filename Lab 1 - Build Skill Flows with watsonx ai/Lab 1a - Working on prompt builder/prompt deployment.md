@@ -7,7 +7,7 @@ Pada tampilan freefrom, kita dapat buat prompt sekreasi kita untuk menuliskan su
 
 
 ### Step 1. Profiling Prompt
-    Salin dan tempel contoh prompt sebagai berikut
+Salin dan tempel contoh prompt sebagai berikut
 
     ```python
     <|header_start|>system<|header_end|><|begin_of_text|>
@@ -37,17 +37,17 @@ Pada tampilan freefrom, kita dapat buat prompt sekreasi kita untuk menuliskan su
     <|end_of_text|>
     <|header_start|>assistant<|header_end|> 
     ```
-    - Konfigurasikan prompt variable
+- Konfigurasikan prompt variable
 ![Add Tool](https://github.com/user-attachments/assets/21b205d5-7cce-47c5-9366-f8523529d77f)
 
-    - Konfigurasikan model parameter
-    <img width="1723" alt="image" src="https://github.com/user-attachments/assets/dc02737c-d9ff-4e89-9173-96fac4408f8c" />
+- Konfigurasikan model parameter
+<img width="1723" alt="image" src="https://github.com/user-attachments/assets/dc02737c-d9ff-4e89-9173-96fac4408f8c" />
 ![Add Tool](https://github.com/user-attachments/assets/dc02737c-d9ff-4e89-9173-96fac4408f8c)
 
 ---
 
 ### Step 2. Fundsheet Prompt
-    Salin dan tempel contoh prompt sebagai berikut
+Salin dan tempel contoh prompt sebagai berikut
    
     ```python
     <|header_start|>system<|header_end|><|begin_of_text|>
@@ -98,19 +98,19 @@ Pada tampilan freefrom, kita dapat buat prompt sekreasi kita untuk menuliskan su
     <|header_start|>assistant<|header_end|> 
     ```
 
-    - Konfigurasikan prompt variable
-    ![Add Tool](https://github.com/user-attachments/assets/a45e8acd-7d83-467a-9594-2a4ed8acd918)
+- Konfigurasikan prompt variable
+![Add Tool](https://github.com/user-attachments/assets/a45e8acd-7d83-467a-9594-2a4ed8acd918)
 
-    - Konfigurasikan model parameter
-    ![Add Tool](https://github.com/user-attachments/assets/4a5f6446-c02c-4ed5-a798-3e6476a74905)
+- Konfigurasikan model parameter
+![Add Tool](https://github.com/user-attachments/assets/4a5f6446-c02c-4ed5-a798-3e6476a74905)
 
 
 ---
 
 ### Step 3. Promote space ke deployment
-    Setelah prompt template sudah dibuat, selanjutnya promote ke deployment 
+Setelah prompt template sudah dibuat, selanjutnya promote ke deployment 
 
 ![Add Tool](https://github.com/user-attachments/assets/1253486e-f9ed-41c9-990d-699ce4c92fbc)
 
-    Pilihlah doployment space yang sudah dibuat dan klik promote
+Pilihlah doployment space yang sudah dibuat dan klik promote
 ![Add Tool](https://github.com/user-attachments/assets/100b1152-7e78-4f18-a4a8-989dab0b85d6)
