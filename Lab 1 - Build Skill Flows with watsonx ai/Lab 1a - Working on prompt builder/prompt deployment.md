@@ -41,7 +41,6 @@ Salin dan tempel contoh prompt sebagai berikut
 ![Add Tool](https://github.com/user-attachments/assets/21b205d5-7cce-47c5-9366-f8523529d77f)
 
 - Konfigurasikan model parameter
-<img width="1723" alt="image" src="https://github.com/user-attachments/assets/dc02737c-d9ff-4e89-9173-96fac4408f8c" />
 ![Add Tool](https://github.com/user-attachments/assets/dc02737c-d9ff-4e89-9173-96fac4408f8c)
 
 ---
