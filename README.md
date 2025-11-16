@@ -17,6 +17,18 @@ Setelah mengikuti workshop ini, Anda akan dapat:
 - Memahami bagaimana Retrieval Augmented Generation (RAG) membantu dalam menyediakan informasi khusus perusahaan tanpa pelanggaran data
 - Merancang alur otomatisasi keputusan yang kompleks
 
+---
+## Environment Setup 
+This guide helps you access and set up the tools used during the workshop: Langflow, Elasticsearch (Watsonx Discovery), Watsonx Orchestrate, and Watsonx.ai.
+
+### Create IBM ID
+Create an IBM Id if you do not have one using [IBM ID Sign Up Form](https://www.ibm.com/account/reg/us-en/signup?formid=urx-19776).  
+Use **the same email** that you have registered for the workshop with.
+
+📖 See documentation: [Creating an IBM ID](https://www.ibm.com/docs/en/cds-saas-flex?topic=support-how-create-ibmid).
+
+---
+
 <div align="center">
   <img src="https://github.com/user-attachments/assets/0964708c-0dcd-4d89-a6e4-cfd1baa8335b" alt="Updated Image" width="1000" height="600">
 </div>
