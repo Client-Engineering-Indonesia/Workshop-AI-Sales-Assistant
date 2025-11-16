@@ -2,20 +2,20 @@
   <img src="https://github.com/user-attachments/assets/e0b98a69-3174-4ca1-96a7-b2a19f0ed5fa" alt="Updated Image" width="256" height="43.9">
 </div>
 
-## 📖 Pendahuluan
+## Introduction
 
-IBM watsonx as Agentic AI memanfaatkan pemrosesan bahasa alami (NLP) dan Generative AI untuk mengorkestrasi keterampilan dasar maupun lanjutan dari katalog guna mengeksekusi permintaan dari pelanggan, karyawan, dan pekerja pengetahuan—serta menyelesaikan tugas-tugas kompleks atas nama mereka.
+IBM watsonx, as an Agentic AI, leverages natural language processing (NLP) and Generative AI to orchestrate both basic and advanced skills from its catalog to execute requests from customers, employees, and knowledge workers — and to complete complex tasks on their behalf.
 
-## 🎯 Workshop Digital Labour
+## Workshop Digital Labour
 
-Workshop ini bertujuan untuk memperkenalkan otomatisasi ke dalam alur kerja organisasi menggunakan [watsonx Orchestrate](https://www.ibm.com/products/watsonx-orchestrate).<br>
+This workshop aims to introduce automation into your organization’s workflows using [watsonx Orchestrate](https://www.ibm.com/products/watsonx-orchestrate).<br>
 
-Setelah mengikuti workshop ini, Anda akan dapat:
-- Mengotomatisasi tugas-tugas tertentu untuk perusahaan Anda
-- Menjelajahi berbagai macam tugas yang dapat diotomatisasi
-- Memanfaatkan Generative AI untuk meningkatkan pengalaman pengguna
-- Memahami bagaimana Retrieval Augmented Generation (RAG) membantu dalam menyediakan informasi khusus perusahaan tanpa pelanggaran data
-- Merancang alur otomatisasi keputusan yang kompleks
+After completing this workshop, you will be able to:
+- Automate specific tasks for your company
+- Explore a wide range of tasks that can be automated
+- Leverage Generative AI to enhance user experience
+- Understand how Retrieval-Augmented Generation (RAG) helps deliver company-specific information without compromising data security
+- Design complex decision-automation workflows
 
 ---
 ## Environment Setup 
@@ -33,9 +33,9 @@ Use **the same email** that you have registered for the workshop with.
   <img src="https://github.com/user-attachments/assets/0964708c-0dcd-4d89-a6e4-cfd1baa8335b" alt="Updated Image" width="1000" height="600">
 </div>
 
-### ⚡️ Disclaimer
+### Disclaimer
 
-Mohon dicatat bahwa agenda yang disebutkan di atas hanya sebagai referensi dan mungkin tidak mencerminkan waktu atau durasi workshop yang sebenarnya.
-Waktu dan durasi workshop dapat berubah sewaktu-waktu.
+Please note that the agenda mentioned above is for reference only and may not reflect the actual timing or duration of the workshop.
+The schedule and duration of the workshop are subject to change at any time.
 
 ---
