@@ -139,4 +139,4 @@ data_bkp/*
 
 assets/*.env
 assets/*.json
-.vscode
+.vscode/
