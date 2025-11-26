@@ -15,9 +15,6 @@ RUN pip install --no-cache-dir -r requirements.txt
 # Copy project files
 COPY . .
 
-# Your FastAPI app lives in /app/assets/main.py
-WORKDIR /app/assets
-
 # Expose Uvicorn port
 EXPOSE 8000
 
