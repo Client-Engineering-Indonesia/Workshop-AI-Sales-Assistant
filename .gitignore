@@ -139,4 +139,5 @@ data_bkp/*
 
 assets/*.env
 assets/*.json
+assets/*ipynb
 .vscode/

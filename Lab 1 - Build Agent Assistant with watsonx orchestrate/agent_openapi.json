@@ -1,0 +1,541 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "DB2 Customer & Fundsheet API",
+    "description": "FastAPI service for querying DB2 customer and fundsheet data (schema TSF84071 on BLUDB).",
+    "version": "1.0.0"
+  },
+  "servers": [
+    {
+      "url": "http://150.240.166.24:8443/",
+      "description": "Production server"
+    }
+  ],
+  "tags": [
+    {
+      "name": "Health",
+      "description": "Service health checks"
+    },
+    {
+      "name": "Customer",
+      "description": "Customer-related data endpoints from TSF84071.CUSTOMERDATA"
+    },
+    {
+      "name": "Fundsheet",
+      "description": "Fundsheet-related data endpoints from TSF84071.FUNDSHEET"
+    },
+    {
+      "name": "Query",
+      "description": "Generic DB2 query endpoint"
+    }
+  ],
+  "paths": {
+    "/health": {
+      "get": {
+        "tags": ["Health"],
+        "summary": "Health Check",
+        "description": "Check the health status of the DB2 API service.",
+        "operationId": "healthCheck",
+        "responses": {
+          "200": {
+            "description": "Service is healthy",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "status": {
+                      "type": "string",
+                      "example": "ok"
+                    }
+                  },
+                  "required": ["status"]
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/customer": {
+      "get": {
+        "tags": ["Customer"],
+        "summary": "Get sample customer row",
+        "description": "Returns the first row from TSF84071.CUSTOMERDATA using `FETCH FIRST 1 ROW ONLY`.",
+        "operationId": "getCustomerSample",
+        "responses": {
+          "200": {
+            "description": "Sample customer record returned successfully",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CustomerResponse"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal server error from DB2",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/customerkind": {
+      "get": {
+        "tags": ["Customer"],
+        "summary": "Get customer kind information",
+        "description": "Returns distinct combinations of customer attributes from TSF84071.CUSTOMERDATA: CUSTOMER_NAME, CUSTOMER_MARRIAGE_STATUS, TRANSACTION_TYPE, HAS_EXISTING_LOAN, LOAN_PRODUCT_INTEREST_LEVEL, CUSTOMER_SEGMENT as KIND.",
+        "operationId": "getCustomerKind",
+        "responses": {
+          "200": {
+            "description": "Customer kind data returned successfully",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CustomerKindResponse"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal server error from DB2",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/fundsheet": {
+      "get": {
+        "tags": ["Fundsheet"],
+        "summary": "Get sample fundsheet row",
+        "description": "Returns the first row from TSF84071.FUNDSHEET using `FETCH FIRST 1 ROW ONLY`.",
+        "operationId": "getFundsheetSample",
+        "responses": {
+          "200": {
+            "description": "Sample fundsheet record returned successfully",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/FundsheetResponse"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal server error from DB2",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/fundsheetkind": {
+      "get": {
+        "tags": ["Fundsheet"],
+        "summary": "Get fundsheet kind information",
+        "description": "Returns distinct combinations of REKSADANA, JENIS_DANA, and KLASIFIKASI_RISIKO as KIND from TSF84071.FUNDSHEET.",
+        "operationId": "getFundsheetKind",
+        "responses": {
+          "200": {
+            "description": "Fundsheets kind data returned successfully",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/FundsheetKindResponse"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal server error from DB2",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/query": {
+      "post": {
+        "tags": ["Query"],
+        "summary": "Run custom DB2 SELECT query",
+        "description": "Runs a custom SQL query against DB2 using the same DSN configuration. **Intended only for SELECT queries**. Use carefully; do not expose publicly without safeguards.",
+        "operationId": "runCustomQuery",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/QueryRequest"
+              },
+              "example": {
+                "query": "SELECT TRANSACTION_TIMESTAMP, CUSTOMER_ID, CUSTOMER_NAME FROM TSF84071.CUSTOMERDATA FETCH FIRST 10 ROWS ONLY"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Query executed successfully",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/QueryResponse"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation error in request body",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ValidationError"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal server error from DB2 or query execution",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "CustomerRecord": {
+        "type": "object",
+        "description": "Single row from TSF84071.CUSTOMERDATA",
+        "properties": {
+          "TRANSACTION_TIMESTAMP": {
+            "type": "string",
+            "description": "Timestamp of the transaction",
+            "example": "2025-01-15T10:30:00Z"
+          },
+          "CUSTOMER_ID": {
+            "type": "string",
+            "description": "Unique customer identifier",
+            "example": "CUST00123"
+          },
+          "CUSTOMER_NAME": {
+            "type": "string",
+            "description": "Customer name",
+            "example": "John Doe"
+          },
+          "CUSTOMER_BIRTHDAY": {
+            "type": "string",
+            "format": "date",
+            "description": "Customer date of birth",
+            "example": "1990-05-20"
+          },
+          "CUSTOMER_MARRIAGE_STATUS": {
+            "type": "string",
+            "description": "Marital status",
+            "example": "Married"
+          },
+          "CUSTOMER_SAVINGS_VALUE": {
+            "type": "number",
+            "format": "double",
+            "description": "Total savings value",
+            "example": 150000000
+          },
+          "TRANSACTION_VALUE": {
+            "type": "number",
+            "format": "double",
+            "description": "Transaction amount",
+            "example": 2500000
+          },
+          "TRANSACTION_TYPE": {
+            "type": "string",
+            "description": "Type of transaction",
+            "example": "Debit"
+          },
+          "SPENDING_LOCATION_OR_CATEGORY": {
+            "type": "string",
+            "description": "Spending location or category",
+            "example": "Groceries"
+          },
+          "ESTIMATED_ANNUAL_INCOME": {
+            "type": "number",
+            "format": "double",
+            "description": "Estimated annual income of the customer",
+            "example": 300000000
+          },
+          "TOTAL_SPENDING_LAST_MONTH": {
+            "type": "number",
+            "format": "double",
+            "description": "Total spending in the last month",
+            "example": 10000000
+          },
+          "MOST_COMMON_SPENDING_CATEGORY": {
+            "type": "string",
+            "description": "Most common spending category",
+            "example": "Dining"
+          },
+          "HAS_EXISTING_LOAN": {
+            "type": "string",
+            "description": "Indicates if customer has existing loan (Y/N or similar)",
+            "example": "Y"
+          },
+          "LOAN_PRODUCT_INTEREST_LEVEL": {
+            "type": "string",
+            "description": "Interest level in loan products",
+            "example": "High"
+          },
+          "CUSTOMER_SEGMENT": {
+            "type": "string",
+            "description": "Customer segment/category",
+            "example": "Affluent"
+          }
+        },
+        "additionalProperties": true
+      },
+      "CustomerKindRecord": {
+        "type": "object",
+        "description": "Record from /customerkind query",
+        "properties": {
+          "CUSTOMER_NAME": {
+            "type": "string",
+            "example": "John Doe"
+          },
+          "CUSTOMER_MARRIAGE_STATUS": {
+            "type": "string",
+            "example": "Single"
+          },
+          "TRANSACTION_TYPE": {
+            "type": "string",
+            "example": "Credit"
+          },
+          "HAS_EXISTING_LOAN": {
+            "type": "string",
+            "example": "N"
+          },
+          "LOAN_PRODUCT_INTEREST_LEVEL": {
+            "type": "string",
+            "example": "Medium"
+          },
+          "KIND": {
+            "type": "string",
+            "description": "Alias of CUSTOMER_SEGMENT",
+            "example": "Mass Market"
+          }
+        }
+      },
+      "FundsheetRecord": {
+        "type": "object",
+        "description": "Single row from TSF84071.FUNDSHEET. Exact columns may vary; REKSADANA, JENIS_DANA, and KLASIFIKASI_RISIKO are included for reference.",
+        "properties": {
+          "REKSADANA": {
+            "type": "string",
+            "description": "Fund name",
+            "example": "Dana Stabil"
+          },
+          "JENIS_DANA": {
+            "type": "string",
+            "description": "Fund type",
+            "example": "Fixed Income"
+          },
+          "KLASIFIKASI_RISIKO": {
+            "type": "string",
+            "description": "Risk classification",
+            "example": "Moderate"
+          }
+        },
+        "additionalProperties": true
+      },
+      "FundsheetKindRecord": {
+        "type": "object",
+        "description": "Record from /fundsheetkind query",
+        "properties": {
+          "REKSADANA": {
+            "type": "string",
+            "example": "Dana Stabil"
+          },
+          "JENIS_DANA": {
+            "type": "string",
+            "example": "Equity"
+          },
+          "KIND": {
+            "type": "string",
+            "description": "Alias of KLASIFIKASI_RISIKO",
+            "example": "High Risk"
+          }
+        }
+      },
+      "CustomerResponse": {
+        "type": "object",
+        "description": "Response wrapper for /customer endpoint",
+        "properties": {
+          "count": {
+            "type": "integer",
+            "description": "Number of records returned (expected to be 1)",
+            "example": 1
+          },
+          "data": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/CustomerRecord"
+            }
+          }
+        },
+        "required": ["count", "data"]
+      },
+      "CustomerKindResponse": {
+        "type": "object",
+        "description": "Response wrapper for /customerkind endpoint",
+        "properties": {
+          "count": {
+            "type": "integer",
+            "example": 5
+          },
+          "data": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/CustomerKindRecord"
+            }
+          }
+        },
+        "required": ["count", "data"]
+      },
+      "FundsheetResponse": {
+        "type": "object",
+        "description": "Response wrapper for /fundsheet endpoint",
+        "properties": {
+          "count": {
+            "type": "integer",
+            "description": "Number of records returned (expected to be 1)",
+            "example": 1
+          },
+          "data": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/FundsheetRecord"
+            }
+          }
+        },
+        "required": ["count", "data"]
+      },
+      "FundsheetKindResponse": {
+        "type": "object",
+        "description": "Response wrapper for /fundsheetkind endpoint",
+        "properties": {
+          "count": {
+            "type": "integer",
+            "example": 3
+          },
+          "data": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/FundsheetKindRecord"
+            }
+          }
+        },
+        "required": ["count", "data"]
+      },
+      "QueryRequest": {
+        "type": "object",
+        "description": "Request body for /query endpoint",
+        "properties": {
+          "query": {
+            "type": "string",
+            "description": "SQL query to execute (SELECT only is recommended)",
+            "example": "SELECT * FROM TSF84071.CUSTOMERDATA FETCH FIRST 10 ROWS ONLY"
+          }
+        },
+        "required": ["query"]
+      },
+      "QueryResponse": {
+        "type": "object",
+        "description": "Generic query response for /query endpoint",
+        "properties": {
+          "count": {
+            "type": "integer",
+            "description": "Number of rows returned",
+            "example": 10
+          },
+          "data": {
+            "type": "array",
+            "description": "List of result rows; each row is a JSON object with column names as keys.",
+            "items": {
+              "type": "object",
+              "additionalProperties": {}
+            }
+          }
+        },
+        "required": ["count", "data"]
+      },
+      "ErrorResponse": {
+        "type": "object",
+        "properties": {
+          "detail": {
+            "type": "string",
+            "description": "Error message describing the issue",
+            "example": "DB2 query failed: [IBM][CLI Driver] SQL30081N A communication error has been detected."
+          }
+        },
+        "required": ["detail"]
+      },
+      "ValidationError": {
+        "type": "object",
+        "properties": {
+          "detail": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "loc": {
+                  "type": "array",
+                  "items": {
+                    "anyOf": [
+                      { "type": "string" },
+                      { "type": "integer" }
+                    ]
+                  },
+                  "description": "Location of the error"
+                },
+                "msg": {
+                  "type": "string",
+                  "description": "Error message"
+                },
+                "type": {
+                  "type": "string",
+                  "description": "Error type"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

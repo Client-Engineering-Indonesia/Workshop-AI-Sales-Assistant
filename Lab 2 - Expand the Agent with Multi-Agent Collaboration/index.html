@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Danamon-style Landing with watsonx Orchestrate</title>
+
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+          sans-serif;
+        background-color: #f5f5f5;
+        color: #222;
+      }
+
+      /* TOP NAVBAR – similar to Danamon */
+      .top-nav {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 64px;
+        background: #ffffff;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 48px;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+        z-index: 10;
+      }
+
+      .logo-area {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+
+      .logo-box {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        padding: 4px 10px;
+        border-radius: 3px;
+        background: linear-gradient(90deg, #f37021 0%, #ffb100 50%, #008c6d 100%);
+        font-weight: 700;
+        font-size: 18px;
+        color: #fff;
+      }
+
+      .logo-sub {
+        font-size: 11px;
+        color: #777;
+      }
+
+      .nav-links {
+        display: flex;
+        align-items: center;
+        gap: 24px;
+        font-size: 14px;
+      }
+
+      .nav-links a {
+        text-decoration: none;
+        color: #444;
+      }
+
+      .nav-links a:hover {
+        color: #f37021;
+      }
+
+      .nav-right {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+      }
+
+      .lang-pill {
+        border-radius: 999px;
+        border: 1px solid #ddd;
+        padding: 4px 10px;
+        font-size: 12px;
+        display: flex;
+        align-items: center;
+        gap: 6px;
+      }
+
+      .menu-button {
+        border-radius: 999px;
+        border: none;
+        padding: 8px 14px;
+        font-size: 12px;
+        cursor: pointer;
+        background: #f37021;
+        color: #fff;
+      }
+
+      /* HERO SECTION */
+      .hero {
+        margin-top: 64px; /* offset for fixed navbar */
+        height: calc(100vh - 64px);
+        min-height: 520px;
+        position: relative;
+        display: flex;
+        align-items: stretch;
+        justify-content: center;
+        overflow: hidden;
+        background: #000;
+      }
+
+      .hero-background {
+        position: absolute;
+        inset: 0;
+        background-image: url("hero.jpg"); /* <-- put your image here */
+        background-size: cover;
+        background-position: center;
+        filter: brightness(0.8);
+      }
+
+      .hero-overlay {
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(
+          90deg,
+          rgba(0, 0, 0, 0.45) 0%,
+          rgba(0, 0, 0, 0.15) 40%,
+          rgba(0, 0, 0, 0.4) 100%
+        );
+      }
+
+      .hero-content {
+        position: relative;
+        z-index: 1;
+        max-width: 1200px;
+        width: 100%;
+        margin: 0 auto;
+        padding: 32px 48px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 40px;
+      }
+
+      .hero-left {
+        color: #fff;
+        max-width: 540px;
+      }
+
+      .hero-kicker {
+        font-size: 14px;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        margin-bottom: 8px;
+        color: #ffd8a0;
+      }
+
+      .hero-title {
+        font-size: 34px;
+        font-weight: 700;
+        line-height: 1.2;
+        margin-bottom: 12px;
+      }
+
+      .hero-subtitle {
+        font-size: 15px;
+        max-width: 420px;
+        color: #f7f7f7;
+      }
+
+      /* RIGHT FLOATING CARD – where chat sits */
+      .hero-right {
+        max-width: 420px;
+        width: 100%;
+        display: flex;
+        justify-content: flex-end;
+      }
+
+      .chat-card {
+        background: #fff7ee;
+        border-radius: 24px;
+        padding: 18px 18px 18px 18px;
+        box-shadow: 0 22px 40px rgba(0, 0, 0, 0.25);
+        border: 1px solid rgba(255, 255, 255, 0.7);
+        width: 100%;
+        max-height: 80vh;
+        display: flex;
+        flex-direction: column;
+      }
+
+      .chat-card-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 12px;
+      }
+
+      .chat-badge {
+        font-size: 11px;
+        font-weight: 600;
+        color: #b64a0a;
+        background: #ffe9d1;
+        padding: 4px 8px;
+        border-radius: 999px;
+      }
+
+      .chat-title-main {
+        font-size: 14px;
+        font-weight: 600;
+        color: #c95a0b;
+      }
+
+      .chat-subtext {
+        font-size: 12px;
+        color: #7b5f4c;
+        margin-bottom: 8px;
+      }
+
+      /* Orchestrate widget container */
+      #root {
+        flex: 1;
+        min-height: 340px;
+        background: #ffffff;
+        border-radius: 16px;
+        overflow: hidden;
+      }
+
+      /* Simple footer bar for “Produk dan Layanan” feel */
+      .footer-strip {
+        background: #fff5e4;
+        padding: 16px 48px;
+        font-size: 14px;
+      }
+
+      @media (max-width: 960px) {
+        .hero-content {
+          flex-direction: column;
+          align-items: flex-start;
+          padding: 24px 20px;
+        }
+
+        .hero-right {
+          width: 100%;
+        }
+
+        .chat-card {
+          max-width: 100%;
+        }
+
+        .nav-links {
+          display: none; /* keep it simple on mobile */
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- TOP NAV -->
+    <header class="top-nav">
+      <div class="logo-area">
+        <div class="logo-box">Danamon</div>
+        <div class="logo-sub">Demo Landing • watsonx Orchestrate</div>
+      </div>
+
+      <nav class="nav-links">
+        <a href="#">Personal</a>
+        <a href="#">Bisnis</a>
+        <a href="#">Digital Banking</a>
+        <a href="#">Privilege</a>
+        <a href="#">Syariah</a>
+        <a href="#">Tentang Danamon</a>
+      </nav>
+
+      <div class="nav-right">
+        <span>🔍</span>
+        <div class="lang-pill">
+          <span>🇮🇩</span>
+          <span>ID</span>
+        </div>
+        <button class="menu-button">Menu Cepat</button>
+      </div>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section class="hero">
+      <div class="hero-background"></div>
+      <div class="hero-overlay"></div>
+
+      <div class="hero-content">
+        <div class="hero-left">
+          <div class="hero-kicker">Kelola dengan Pintar</div>
+          <div class="hero-title">Aset Jadi Lancar, Chat Jadi Lebih Mudah</div>
+          <p class="hero-subtitle">
+            Dapatkan bantuan virtual untuk email dan jadwal pertemuan Anda,
+            terintegrasi dengan watsonx Orchestrate. Dirancang untuk demo
+            Danamon dan skenario perbankan.
+          </p>
+        </div>
+
+        <div class="hero-right">
+          <div class="chat-card">
+            <div class="chat-card-header">
+              <div>
+                <div class="chat-badge">Virtual Assistant</div>
+                <div class="chat-title-main">
+                  Danamon Smart Assistant (Demo)
+                </div>
