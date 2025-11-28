@@ -1,41 +1,122 @@
-# How to Get an API Key for watsonx.ai
+Manulife Sales Advisor / Bancassurance Specialist who needs real-time customer insights and product recommendations to prepare for meetings, calls, and campaigns.
 
-Untuk dapat menggunakan fitur atau kapabilitas yang terdapat pada platform **watsonx.ai**, kita memerlukan tiga komponen utama:
+“Sales Enablement Assistant”
+“Manulife Sales Copilot”
+“Advisor Productivity Assistant”
 
-1. **API Key** untuk watsonx.ai  
-2. **Project ID** dari project yang akan digunakan  
-3. **URL endpoint** dari server watsonx.ai yang digunakan  
+👉 Persona = internal sales/relationship manager
+👉 Customers = targets in the data, not the direct users of the Orchestrate assistant.
 
-Berikut merupakan proses yang harus dilakukan:
-
----
-
-## Step 1: Mengambil API Key watsonx.ai
-
-1. Buka halaman watsonx.ai di [https://dataplatform.cloud.ibm.com](https://dataplatform.cloud.ibm.com)
-   <img width="1000" alt="image" src="https://github.com/user-attachments/assets/76a18db3-66db-4c00-960f-50aaf0795679" />
-
-2. Cari bagian **Developer Access**
-   <img width="1000" alt="image" src="https://github.com/user-attachments/assets/5b94c45e-bd89-4572-beef-990b7b5b5f6a" />
-
-3. Klik **Create API Key**
-   <img width="1000" alt="image" src="https://github.com/user-attachments/assets/1974c6ba-d770-4f7d-9031-09743d1b0c13" />
-
-6. Masukkan **nama** dan **deskripsi** (opsional), lalu klik **Create**
-   <img width="1000" alt="image" src="https://github.com/user-attachments/assets/95032ae2-7a43-4016-9dd3-3ad5adc05363" />
-
-8. Anda akan mendapatkan API Key. **Simpan API tersebut di tempat yang aman**  
-9. URL endpoint watsonx.ai juga dapat ditemukan pada bagian **Developer Access**
 
 ---
 
-## Step 2: Mengambil Project ID
+Customer Insight Request
 
-1. Buatlah sebuah project terlebih dahulu di platform watsonx.ai  
-2. Masuk ke halaman project  
-3. Klik tab **Manage**  
-4. **Project ID** akan ditampilkan di halaman tersebut
-   
-<img width="1000" alt="image" src="https://github.com/user-attachments/assets/10d21391-d0ba-4947-8aca-fd1153a60bfe" />
+Sales Advisor:
+“Can you summarize Budi Santoso’s financial profile for my meeting today?”
+
+Assistant:
+“Budi Santoso is 42, married with two dependents, monthly income IDR 32M, medium risk tolerance, and prioritizes education & retirement planning. His current coverage gap is ~IDR 1.2B. He prefers WhatsApp follow-ups and typically responds in afternoons.”
+
+---
+
+Personalized Product Recommendation
+
+Sales Advisor:
+“What are the best Manulife products for Budi right now?”
+
+Assistant:
+“Based on his age, income, dependents, and retirement goal, the top 3 recommended products are:
+1️⃣ MiFuture Income Protector — long-term retirement income
+2️⃣ MiSmart Life Protector — education funding & family protection
+3️⃣ Unit-linked Growth Fund — moderate long-term investment
+Would you like a pitch script or comparison table?”
+
+---
+
+Pitch Script / Sales Playbook
+
+Sales Advisor:
+“Create a simple Bahasa pitch for MiFuture Income Protector.”
+
+Assistant:
+“Baik, berikut skrip singkatnya:
+‘Pak Budi, berdasarkan usia dan rencana pensiun Bapak, MiFuture Income Protector membantu memastikan aliran dana tetap stabil di masa pensiun, tanpa membebani keluarga. Premi fleksibel, manfaat perlindungan, dan potensi pertumbuhan investasi.’
+Ingin versi WhatsApp atau email?”
+
+
+---
+
+Objection Handling
+
+Sales Advisor:
+“Budi said the premium is too expensive — how should I respond?”
+
+Assistant:
+“You can acknowledge the concern and reframe the value:
+‘Betul Pak, premi adalah komitmen. Namun manfaat pensiun yang pasti dapat membantu menjaga gaya hidup Bapak dan keluarga di masa depan. Kita juga bisa menyesuaikan premi agar tetap nyaman.’
+Would you like alternative lower-premium options?”
+
+---
+
+Cross-Sell Opportunity
+
+Sales Advisor:
+“Anything else relevant for Budi besides retirement?”
+
+Assistant:
+“Yes — based on spending and family profile, he lacks education savings for his youngest child. Consider MiEduSaver — projected coverage until age 21. Conversion probability: 64%.”
+
+
+---
+
+Meeting Preparation
+
+Sales Advisor:
+“I’m meeting him tomorrow. What should I focus on?”
+
+Assistant:
+“Recommend discussing retirement readiness, inflation impact, and family protection. Bring illustration for IDR 2B coverage. Suggest short financial health check — he responds well to structured assessments.”
+
+---
+
+Follow-Up Enablement
+
+Sales Advisor:
+“Draft a follow-up WhatsApp message.”
+
+Assistant:
+“Hi Pak Budi, terima kasih atas waktunya kemarin. Saya kirim ilustrasi manfaat MiFuture Income Protector sesuai rencana pensiun Bapak ya. Bila ada yang ingin didiskusikan, saya siap membantu 😊”
+
+---
+
+Campaign / Performance Insight
+
+Sales Advisor:
+“How did my last 2 weeks of offers perform?”
+
+Assistant:
+“You contacted 27 customers, 18 responded, 7 completed proposals, and 3 converted — 11% above branch average. Your strongest segment is ‘Mid-career family planners’. Recommend targeting similar profiles.”
+
+
+---
+
+Product Comparison
+
+Sales Advisor:
+“What’s the difference between MiSmart Life Protector and MiEduSaver?”
+
+Assistant:
+“MiSmart Life Protector focuses on life protection + flexible investment, suitable for broad family needs. MiEduSaver is structured savings specifically for education milestones with fixed benefit timelines.”
+
+---
+
+Task / CRM Automation
+
+Sales Advisor:
+“Create a follow-up task for Budi next Monday at 3 PM.”
+
+Assistant:
+“Done — reminder scheduled in CRM for Monday, 25 Nov at 15:00 WIB with note: ‘Review retirement illustration + premium adjustment options.’”
 
 ---

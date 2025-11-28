@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Danamon + watsonx Orchestrate Demo</title>
+
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      html,
+      body {
+        height: 100%;
+      }
+
+      body {
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+          sans-serif;
+        background-color: #000; /* fallback if image fails */
+        overflow: hidden;
+      }
+
+      /* Fullscreen screenshot behind everything */
+      .bg-img {
+        position: fixed;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: 5% 80%;  /* <--- geser ke kanan, dan tetap agak ke bawah */
+        z-index: -1; /* behind everything */
+      }
+
+      /* Orchestrate root: keep it invisible */
+      #root {
+        position: fixed;
+        bottom: 0;
+        right: 0;
+        width: 0;
+        height: 0;
+        /* no background, no border, no box-shadow */
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- Your Danamon homepage screenshot -->
+    <img src="webpage.png" alt="" class="bg-img" />
+
+    <!-- Orchestrate will hook into this (invisible) div -->
+    <div id="root"></div>
+
+    <script>
+      window.wxOConfiguration = {
+        orchestrationID:
+          "20240412-0953-5360-4080-1e20c9237d4e_20250716-0744-0171-9068-76c0bcc785f2",
+        hostURL: "https://dl.watson-orchestrate.ibm.com",
+        rootElementID: "root",
+        chatOptions: {
+          agentId: "f637fbc3-40df-45bb-8327-e240982cc3ea",
+        },
+      };
+
+      window.addEventListener("DOMContentLoaded", function () {
+        const script = document.createElement("script");
+        script.src = `${window.wxOConfiguration.hostURL}/wxochat/wxoLoader.js?embed=true`;
+        script.addEventListener("load", function () {
+          wxoLoader.init();
+        });
+        document.head.appendChild(script);
+      });
+    </script>
+  </body>
+</html>
