@@ -7,6 +7,7 @@ You will create **two specialized agents** that work together:
 
 Later labs will combine these with additional agents (sales enablement, performance, etc.)<br>
 
+---
 
 By the end of this lab you will be able to:<br>
 - Define an **agent profile & behavior** prompt in watsonx  

@@ -2,6 +2,7 @@
 
 watsonx governance helps you direct, manage, and monitor your AI (LLMs, ML models, and even agents) so they are responsible, transparent, and compliant with regulations and internal policies<br>
 
+---
 
 By the end of this lab you will be able to:<br>
 - Create a **use case** in watsonx.governance for your Sales Assistant

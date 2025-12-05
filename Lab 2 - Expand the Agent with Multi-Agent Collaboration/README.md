@@ -11,6 +11,7 @@ In **Lab 2**, you will **expand this into a multi-agent solution** by adding:
 - A **Performance Agent** to analyze sales performance  
 - Basic **monitoring & tracing** to understand how your agents behave
 
+---
 
 By the end of this lab you will be able to:<br>
 - Design a **Sales Enablement Agent** that calls other agents and tools  
