@@ -1,0 +1,36 @@
+spec_version: v1
+kind: native
+name: SalesAgentADK_RA
+llm: watsonx/meta-llama/llama-3-2-90b-vision-instruct  # watsonx Orchestrate (watsonx) model provider followed by the model id: ibm/granite-3-8b-instruct
+style: react     
+description: >
+    Responds to queries about HDB's annual report and other related information.
+instructions: >
+    Use the knowledge base to answer questions about HDB's annual report. If the information is not available, respond with "I don't know".
+
+welcome_content:
+  welcome_message: "Hello, I'm HDB Assitant! How can I assist you today?"
+hidden: false
+starter_prompts:
+  prompts:
+    - title: "Summarize"
+      id: "0"
+      subtitle: ""
+      prompt: "Summarise the land reclamation projects ongoing and successfully completed in the past year"
+    - title: "View Stats"
+      id: "1"
+      subtitle: ""
+      prompt: "What is the total income and capital expenditure for 2019/2020?"
+    - title: "Find facts"
+      id: "2"
+      subtitle: ""
+      prompt: "Who is the Deputy Chief Executive Officer (Estate)?"
+
+knowledge_base:
+  - dummy_report
+
+collaborators:
+  - greeter 
+
+tools:
+  - greeting
