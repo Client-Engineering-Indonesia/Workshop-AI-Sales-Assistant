@@ -85,7 +85,26 @@ orchestrate env activate agentic-inc-3-v2
 
 ---
 
-### Step 4: Build Workflow
+### Step 4: Integrate the AI Model Gateway
+```bash
+# Adding the Model to watsonx Orchestrate
+orchestrate models add --name google/gemini-2.5-flash --app-id gg_creds
+
+# Create storage for Credentials
+orchestrate connections add -a gg_creds
+
+# Distribute the Credentials for Draft and Live Environment
+orchestrate connections configure -a gg_creds --env draft -k key_value -t team
+orchestrate connections configure -a gg_creds --env live -k key_value -t team
+
+# Adding the Credentials Key
+orchestrate connections set-credentials -a gg_creds --env draft \
+  -e "api_key=$GOOGLE_API_KEY"
+orchestrate connections set-credentials -a gg_creds --env live \
+  -e "api_key=$GOOGLE_API_KEY"
+```
+
+### Step 5: Build Workflow
 
 In this session you will try to deploy collaborator agent from this <a href="https://github.com/IBM/ibm-watsonx-orchestrate-adk/tree/main/examples/flow_builder/get_pet_facts">link</a>
 
