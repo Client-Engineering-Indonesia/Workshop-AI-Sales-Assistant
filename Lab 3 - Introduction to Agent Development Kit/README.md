@@ -28,8 +28,7 @@ Before installing the ADK, ensure the following software is installed on your sy
 
 
 3.  (Optional) Create a Virtual Environment
-
-Use Python's built-in `venv` module to isolate your environment:
+   Use Python's built-in `venv` module to isolate your environment:
 
 ```bash
 # Create virtual environment
