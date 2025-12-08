@@ -1,12 +1,17 @@
 spec_version: v1
 kind: native
 name: SalesAgentADK_RA
-llm: watsonx/meta-llama/llama-3-2-90b-vision-instruct  # watsonx Orchestrate (watsonx) model provider followed by the model id: ibm/granite-3-8b-instruct
+llm: groq/openai/gpt-oss-120b  # watsonx Orchestrate (watsonx) model provider followed by the model id: ibm/granite-3-8b-instruct
 style: react     
 description: >
     Responds to queries about HDB's annual report and other related information.
 instructions: >
-    Use the knowledge base to answer questions about HDB's annual report. If the information is not available, respond with "I don't know".
+    Use the knowledge base to answer questions about HDB's annual report. 
+    For questions that are mainly about numbers, financial figures, or comparisons
+    between years (e.g. deficits, capital expenditure, number of flats, solar targets),
+    delegate the calculation part to StatsAgentADK_RA and use its answer in your reply.
+    If the information is not available, respond with "I don't know".
+
 
 welcome_content:
   welcome_message: "Hello, I'm HDB Assitant! How can I assist you today?"
@@ -30,7 +35,6 @@ knowledge_base:
   - dummy_report
 
 collaborators:
-  - greeter 
+  - StatsAgentADK_RA
 
-tools:
-  - greeting
+tools: []
