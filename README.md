@@ -2,9 +2,9 @@
   <img src="https://github.com/user-attachments/assets/e0b98a69-3174-4ca1-96a7-b2a19f0ed5fa" alt="Updated Image" width="256" height="43.9">
 </div>
 
-## Introduction
+### Introduction
 
-IBM watsonx, as an Agentic AI, leverages natural language processing (NLP) and Generative AI to orchestrate both basic and advanced skills from its catalog to execute requests from customers, employees, and knowledge workers — and to complete complex tasks on their behalf.
+IBM watsonx, as an Agentic AI, leverages natural language processing (NLP) and Generative AI to orchestrate both basic and advanced skills from its catalog to execute requests from customers, employees, and knowledge workers — and to complete complex tasks on their behalf.<br>
 
 ## Workshop Digital Labour
 
@@ -16,6 +16,10 @@ After completing this workshop, you will be able to:
 - Leverage Generative AI to enhance user experience
 - Understand how Retrieval-Augmented Generation (RAG) helps deliver company-specific information without compromising data security
 - Design complex decision-automation workflows
+
+**At Glance How the Agent Works**<br>
+
+<img width="2417" height="1357" alt="image" src="https://github.com/user-attachments/assets/b99fe543-4610-4f91-9f34-d73efade64bb" /><br>
 
 ---
 ## Environment Setup 
