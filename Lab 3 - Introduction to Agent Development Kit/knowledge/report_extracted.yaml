@@ -2,8 +2,20 @@ spec_version: v1
 kind: knowledge_base 
 name: dummy_report
 description: >
-   This knowledge base contains the HDB annual report.
+  This knowledge base contains the HDB annual report.
 documents:
-   - "combined_output_text_str.txt"
+  - "combined_output_text_str.txt"
+
 vector_index:
-   embeddings_model_name: intfloat/multilingual-e5-large
+  embeddings_model_name: intfloat/multilingual-e5-large
+
+  # 👇 Add this block to control chunking
+  text_splitter:
+    type: recursive_character
+    chunk_size: 1000      # characters per chunk
+    chunk_overlap: 200    # overlap between chunks
+    separators:           # optional; you can omit to use defaults
+      - "\n\n"
+      - "\n"
+      - ". "
+      - " "

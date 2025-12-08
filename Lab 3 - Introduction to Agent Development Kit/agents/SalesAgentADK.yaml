@@ -29,7 +29,7 @@ starter_prompts:
     - title: "Find facts"
       id: "2"
       subtitle: ""
-      prompt: "Who is the Deputy Chief Executive Officer (Estate)?"
+      prompt: "who is the chairman of the HDB?"
 
 knowledge_base:
   - dummy_report
