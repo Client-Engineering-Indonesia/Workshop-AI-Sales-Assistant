@@ -19,7 +19,7 @@ After completing this workshop, you will be able to:
 
 **At Glance** How the Agent Works<br>
 
-<img width="2374" height="1042" alt="image" src="https://github.com/user-attachments/assets/bda8c54d-215f-4006-b342-128b00c56aa1" /><br>
+<img width="2374" height="1042" alt="image" src="https://github.com/user-attachments/assets/a0929ee6-8640-4058-9de1-8384d51b8e21" /><br>
 
 ---
 ## Environment Setup 
