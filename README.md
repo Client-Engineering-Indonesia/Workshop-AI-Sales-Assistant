@@ -19,9 +19,8 @@ After completing this workshop, you will be able to:
 
 ---
 ## Environment Setup 
-This guide helps you access and set up the tools used during the workshop: Langflow, Elasticsearch (Watsonx Discovery), Watsonx Orchestrate, and Watsonx.ai.
 
-### Create IBM ID
+**Create IBM ID**<br>
 Create an IBM Id if you do not have one using [IBM ID Sign Up Form](https://www.ibm.com/account/reg/us-en/signup?formid=urx-19776).  
 Use **the same email** that you have registered for the workshop with.
 
