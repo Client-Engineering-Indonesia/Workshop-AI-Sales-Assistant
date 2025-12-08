@@ -17,7 +17,7 @@ After completing this workshop, you will be able to:
 - Understand how Retrieval-Augmented Generation (RAG) helps deliver company-specific information without compromising data security
 - Design complex decision-automation workflows
 
-**At Glance** How the Agent Works<br>
+**At Glance** How the Agent Works on this lab:<br>
 
 <img width="2374" height="1042" alt="image" src="https://github.com/user-attachments/assets/a0929ee6-8640-4058-9de1-8384d51b8e21" /><br>
 
