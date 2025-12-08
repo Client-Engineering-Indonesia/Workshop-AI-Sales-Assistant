@@ -27,7 +27,7 @@ Use **the same email** that you have registered for the workshop with.
 📖 See documentation: [Creating an IBM ID](https://www.ibm.com/docs/en/cds-saas-flex?topic=support-how-create-ibmid).
 
 <div align="center">
-  <img src="https://github.com/user-attachments/assets/f57a6b4d-e4c6-4df8-a8bf-2fadd756412e" alt="Updated Image" width="1000" height="600">
+  <img src="https://github.com/user-attachments/assets/02db8c31-6118-49b5-8ed4-e061c9aa254a" alt="Updated Image" width="1000" height="600">
 </div>
 
 ### Disclaimer
