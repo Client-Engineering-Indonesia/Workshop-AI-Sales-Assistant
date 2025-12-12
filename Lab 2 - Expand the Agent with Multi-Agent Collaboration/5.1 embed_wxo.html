@@ -55,23 +55,21 @@
 
     <script>
       window.wxOConfiguration = {
-        orchestrationID:
-          "xxxx",
-        hostURL: "xxxx",
+        orchestrationID: "20240412-0953-5360-4080-1e20c9237d4e_20250716-0744-0171-9068-76c0bcc785f2",
+        hostURL: "https://dl.watson-orchestrate.ibm.com",
         rootElementID: "root",
         chatOptions: {
-          agentId: "xxxx",
-        },
+            agentId: "991a2a39-1ea7-482d-bf0c-4046244a1f4c", 
+        }
       };
-
-      window.addEventListener("DOMContentLoaded", function () {
-        const script = document.createElement("script");
+      setTimeout(function () {
+        const script = document.createElement('script');
         script.src = `${window.wxOConfiguration.hostURL}/wxochat/wxoLoader.js?embed=true`;
-        script.addEventListener("load", function () {
-          wxoLoader.init();
+        script.addEventListener('load', function () {
+            wxoLoader.init();
         });
         document.head.appendChild(script);
-      });
+      }, 0);                     
     </script>
   </body>
 </html>
