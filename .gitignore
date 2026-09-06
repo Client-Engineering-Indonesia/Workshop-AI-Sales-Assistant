@@ -141,3 +141,6 @@ assets/*.env
 assets/*.json
 assets/*ipynb
 .vscode/
+.DS_Store
+*.pyc
+*.pyo
